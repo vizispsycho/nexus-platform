@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEXUS | Predictive Human & Societal Intelligence</title>
-  <meta name="description" content="AI-driven macro-behavioral forecasting, collective stability modeling, and precision product-market fit intelligence.">
-  
-  <!-- Fonts -->
+  <title>BE-ORG | Behaviorally Informed Platform & Psychosocial Intelligence</title>
+  <meta name="description" content="Commercial behavioral insights, sludge auditing, and predictive organizational well-being diagnostics.">
+
+  <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  
-  <!-- Tailwind CSS via CDN -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS & Lucide Icons -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <script>
@@ -27,17 +26,17 @@
           },
           colors: {
             brand: {
-              50: '#eef2ff',
               400: '#818cf8',
               500: '#6366f1',
               600: '#4f46e5',
               700: '#4338ca',
             },
             surface: {
-              900: '#07090e',
-              800: '#0d1117',
-              700: '#161b22',
-              600: '#21262d',
+              950: '#07090e',
+              900: '#0d1117',
+              850: '#111622',
+              800: '#161b26',
+              700: '#212636',
             }
           }
         }
@@ -46,62 +45,55 @@
   </script>
 
   <style>
-    /* Gradient Glow & Glassmorphism Effects */
-    .hero-glow {
-      background: radial-gradient(circle at 50% 20%, rgba(99, 102, 241, 0.15) 0%, rgba(13, 17, 23, 0) 70%);
+    .hero-gradient {
+      background: radial-gradient(circle at 50% 15%, rgba(99, 102, 241, 0.18) 0%, rgba(7, 9, 14, 0) 70%);
     }
-    .glass-panel {
-      background: rgba(22, 27, 34, 0.7);
+    .glass-card {
+      background: rgba(17, 22, 34, 0.75);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
-    .glass-panel:hover {
+    .glass-card:hover {
       border-color: rgba(99, 102, 241, 0.35);
     }
-    .neon-border {
-      border: 1px solid rgba(99, 102, 241, 0.4);
-      box-shadow: 0 0 25px rgba(99, 102, 241, 0.12);
-    }
-    /* Subtle Grid background */
-    .bg-grid {
-      background-size: 40px 40px;
-      background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    .bg-dots {
+      background-size: 32px 32px;
+      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
     }
   </style>
 </head>
-<body class="bg-surface-900 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white bg-grid">
+<body class="bg-surface-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white bg-dots">
 
   <!-- ======================================================== -->
   <!-- NAVIGATION BAR                                           -->
   <!-- ======================================================== -->
-  <nav class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-white/5 py-4 px-6 md:px-12 flex items-center justify-between">
+  <nav class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-white/5 py-4 px-6 md:px-12 flex items-center justify-between">
     <div class="flex items-center gap-3">
-      <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center shadow-lg shadow-brand-500/25">
+      <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-400 flex items-center justify-center shadow-lg shadow-brand-500/25">
         <i data-lucide="network" class="w-5 h-5 text-white"></i>
       </div>
       <div>
         <span class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-          NEXUS <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-brand-500/20 text-brand-400 border border-brand-500/30">Intelligence</span>
+          BE-ORG <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-brand-500/20 text-brand-400 border border-brand-500/30">Science & Practice</span>
         </span>
       </div>
     </div>
 
     <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-      <a href="#solutions" class="hover:text-white transition">Solutions</a>
-      <a href="#product-simulator" class="hover:text-white transition">Market Simulator</a>
-      <a href="#wellness-audit" class="hover:text-white transition">Psychosocial Audit</a>
-      <a href="#pricing" class="hover:text-white transition">Enterprise Pricing</a>
+      <a href="#foundations" class="hover:text-white transition">Behavioral Framework</a>
+      <a href="#product-simulator" class="hover:text-white transition">Product Architecture</a>
+      <a href="#sludge-audit" class="hover:text-white transition">Sludge Diagnostic</a>
+      <a href="#org-resilience" class="hover:text-white transition">Organizational Health</a>
+      <a href="#pricing" class="hover:text-white transition">Commercial Tiers</a>
     </div>
 
     <div class="flex items-center gap-4">
-      <a href="#product-simulator" class="hidden sm:inline-flex text-xs font-semibold px-4 py-2 rounded-lg bg-surface-700 hover:bg-surface-600 text-slate-200 border border-white/10 transition">
-        Live Sandbox
+      <a href="#product-simulator" class="hidden sm:inline-flex text-xs font-semibold px-4 py-2 rounded-lg bg-surface-800 hover:bg-surface-700 text-slate-200 border border-white/10 transition">
+        Diagnostic Sandbox
       </a>
       <a href="#pricing" class="text-xs font-semibold px-5 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-500 text-white shadow-lg shadow-brand-600/30 transition transform hover:-translate-y-0.5">
-        Request Access
+        Commission Retainer
       </a>
     </div>
   </nav>
@@ -109,224 +101,227 @@
   <!-- ======================================================== -->
   <!-- HERO SECTION                                             -->
   <!-- ======================================================== -->
-  <header class="relative pt-36 pb-20 md:pt-48 md:pb-32 px-6 hero-glow flex flex-col items-center text-center overflow-hidden">
-    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-panel border border-brand-500/30 text-brand-400 text-xs font-medium mb-8">
+  <header class="relative pt-36 pb-20 md:pt-48 md:pb-32 px-6 hero-gradient flex flex-col items-center text-center overflow-hidden">
+    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card border border-brand-500/30 text-brand-400 text-xs font-medium mb-8">
       <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-      Autonomous Behavioral Forecasting & Macro Diagnostics
+      Evidence-Based Behavioral Architecture & Sludge Elimination Engine
     </div>
 
     <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight max-w-4xl text-white leading-[1.1]">
-      Predict Collective Behavior. <br>
+      Beyond Econs and Intuition. <br>
       <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-indigo-300 to-cyan-400">
-        Engineer Resilient Products.
+        Design for Human Reality.
       </span>
     </h1>
 
     <p class="mt-6 text-slate-400 text-lg sm:text-xl max-w-2xl leading-relaxed font-normal">
-      NEXUS synthesizes open macro-economic data, public psychological signals, and consumer friction vectors to forecast societal stability and optimize high-demand product architecture.
+      Human intention translates to action less than a third of the time. We deploy choice architecture, behavioral economics, and industrial psychology to remove sludge, ensure product adoption, and insulate organizational health.
     </p>
 
     <div class="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
       <a href="#product-simulator" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm shadow-xl shadow-brand-600/25 flex items-center justify-center gap-2 transition">
-        Launch Market Simulator <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        Simulate Product Fit <i data-lucide="arrow-right" class="w-4 h-4"></i>
       </a>
-      <a href="#wellness-audit" class="w-full sm:w-auto px-8 py-3.5 rounded-xl glass-panel hover:bg-surface-700 text-slate-200 font-semibold text-sm border border-white/10 flex items-center justify-center gap-2 transition">
-        Organizational Audit
+      <a href="#sludge-audit" class="w-full sm:w-auto px-8 py-3.5 rounded-xl glass-card hover:bg-surface-800 text-slate-200 font-semibold text-sm border border-white/10 flex items-center justify-center gap-2 transition">
+        Run Sludge Audit
       </a>
     </div>
 
-    <!-- Live Telemetry Bar -->
-    <div class="mt-16 w-full max-w-5xl glass-panel rounded-2xl p-6 border border-white/5 flex flex-wrap items-center justify-between gap-6 text-left">
+    <!-- Live Telemetry KPI Bar -->
+    <div class="mt-16 w-full max-w-5xl glass-card rounded-2xl p-6 border border-white/5 flex flex-wrap items-center justify-between gap-6 text-left">
       <div class="flex items-center gap-4 min-w-[200px]">
         <div class="p-3 rounded-xl bg-brand-500/10 text-brand-400 border border-brand-500/20">
-          <i data-lucide="shield-alert" class="w-6 h-6"></i>
+          <i data-lucide="split" class="w-6 h-6"></i>
         </div>
         <div>
-          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Societal Friction Index</div>
+          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Intention-Action Gap</div>
           <div class="text-xl font-bold text-white flex items-center gap-2">
-            48.2 / 100 <span class="text-xs font-sans font-medium text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">Equilibrium</span>
+            72% Failure Rate <span class="text-xs font-sans font-medium text-rose-400 bg-rose-500/10 px-2 py-0.5 rounded">Baseline</span>
           </div>
         </div>
       </div>
 
       <div class="flex items-center gap-4 min-w-[200px]">
         <div class="p-3 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
-          <i data-lucide="activity" class="w-6 h-6"></i>
+          <i data-lucide="filter" class="w-6 h-6"></i>
         </div>
         <div>
-          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Psychosocial Strain</div>
+          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Average Process Sludge</div>
           <div class="text-xl font-bold text-white flex items-center gap-2">
-            61.4 / 100 <span class="text-xs font-sans font-medium text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded">Elevated</span>
+            46.8% Impedance <span class="text-xs font-sans font-medium text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded">Remediable</span>
           </div>
         </div>
       </div>
 
       <div class="flex items-center gap-4 min-w-[200px]">
         <div class="p-3 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
-          <i data-lucide="trending-up" class="w-6 h-6"></i>
+          <i data-lucide="users" class="w-6 h-6"></i>
         </div>
         <div>
-          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Consumer Mode</div>
-          <div class="text-xl font-bold text-white">Value & Defensiveness</div>
+          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Dominant Audience Type</div>
+          <div class="text-xl font-bold text-white">Type 6 (Nudgeable)</div>
         </div>
       </div>
     </div>
   </header>
 
   <!-- ======================================================== -->
-  <!-- DUAL AUDIENCE VALUE PROPOSITION                          -->
+  <!-- SCIENTIFIC PILLARS & FOUNDATIONS                         -->
   <!-- ======================================================== -->
-  <section id="solutions" class="py-24 px-6 max-w-7xl mx-auto">
+  <section id="foundations" class="py-24 px-6 max-w-7xl mx-auto">
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-xs font-mono uppercase tracking-widest text-brand-400 mb-3">Two Integrated Disciplines</h2>
-      <p class="text-3xl sm:text-4xl font-bold text-white">Engineered for Decision Makers & Psychologists</p>
-      <p class="mt-4 text-slate-400 text-sm sm:text-base">We bridge mathematical macro-economics and clinical behavioral insights into a unified intelligence framework.</p>
+      <h2 class="text-xs font-mono uppercase tracking-widest text-brand-400 mb-3">Academic Rigor Meets Commercial Utility</h2>
+      <p class="text-3xl sm:text-4xl font-bold text-white">Three Pillars of Applied Human Compliance</p>
+      <p class="mt-4 text-slate-400 text-sm sm:text-base">We replace intuition and guesswork with frameworks published by global authorities in behavioral economics and organizational science.</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <!-- Card 1: For Business Leaders -->
-      <div class="glass-panel p-8 sm:p-10 rounded-2xl border border-white/5 relative overflow-hidden group">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="glass-card p-8 rounded-2xl border border-white/5 relative group">
         <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center mb-6 border border-brand-500/20">
-          <i data-lucide="briefcase" class="w-6 h-6"></i>
+          <i data-lucide="layers" class="w-6 h-6"></i>
         </div>
-        <h3 class="text-2xl font-bold text-white">For Executives & Product Builders</h3>
+        <h3 class="text-xl font-bold text-white">The Consumer Continuum (BRCCC)</h3>
         <p class="mt-3 text-slate-400 text-sm leading-relaxed">
-          Stop launching products blindly into recessions or volatile consumer moods. Align packaging, pricing tiers, and messaging with exact purchasing elasticity and living-cost friction.
+          Economics treats consumers as either perfectly rational "econs" or naive victims. We model your market across 8 distinct bounded rationality types to identify exact price and cognitive sensitivity.
         </p>
-        <ul class="mt-6 space-y-3 text-sm text-slate-300">
-          <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-400"></i> Pricing power elasticity against real CPI strain</li>
-          <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-400"></i> Category viability scores prior to capital deployment</li>
-          <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-400"></i> Optimal digital vs. field acquisition channel split</li>
-        </ul>
+        <span class="inline-block mt-4 text-xs font-mono text-brand-400">Ref: Derek Ireland (BRCCC Model)</span>
       </div>
 
-      <!-- Card 2: For Psychologists & People Leaders -->
-      <div class="glass-panel p-8 sm:p-10 rounded-2xl border border-white/5 relative overflow-hidden group">
+      <div class="glass-card p-8 rounded-2xl border border-white/5 relative group">
         <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-6 border border-indigo-500/20">
-          <i data-lucide="heart-pulse" class="w-6 h-6"></i>
+          <i data-lucide="sliders-horizontal" class="w-6 h-6"></i>
         </div>
-        <h3 class="text-2xl font-bold text-white">For Applied Psychologists & Leaders</h3>
+        <h3 class="text-xl font-bold text-white">The Plumbing Paradigm & Sludge</h3>
         <p class="mt-3 text-slate-400 text-sm leading-relaxed">
-          Track ambient societal anxiety, youth alienation, and systemic burnout. Detect when external economic despair threatens internal organizational cohesion or community stability.
+          Behavior requires motivation pressure, but friction blocks the pipes. We audit and eradicate friction points across Process, Communication, and Inclusivity to close the intention-action chasm.
         </p>
-        <ul class="mt-6 space-y-3 text-sm text-slate-300">
-          <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-400"></i> Youth NEET rate and societal anomie indexes</li>
-          <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-400"></i> Clinical despair baselines & burnout early warnings</li>
-          <li class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-4 h-4 text-indigo-400"></i> Psychologically grounded workplace intervention roadmaps</li>
-        </ul>
+        <span class="inline-block mt-4 text-xs font-mono text-indigo-400">Ref: Dilip Soman & Sunstein</span>
+      </div>
+
+      <div class="glass-card p-8 rounded-2xl border border-white/5 relative group">
+        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-6 border border-cyan-500/20">
+          <i data-lucide="shield-check" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-xl font-bold text-white">Organizational Psychology (I-O)</h3>
+        <p class="mt-3 text-slate-400 text-sm leading-relaxed">
+          Workforce performance cannot be detached from human cognitive limits, job stressors, and psychological safety. We diagnose institutional burnout and counterproductive behaviors (CWB).
+        </p>
+        <span class="inline-block mt-4 text-xs font-mono text-cyan-400">Ref: Spector, Campbell, & Ones</span>
       </div>
     </div>
   </section>
 
   <!-- ======================================================== -->
-  <!-- INTERACTIVE TOOL 1: PRODUCT VIABILITY SIMULATOR          -->
+  <!-- SERVICE 01: PRODUCT VIABILITY SIMULATOR                  -->
   <!-- ======================================================== -->
   <section id="product-simulator" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
       <div>
-        <span class="text-xs font-mono uppercase tracking-widest text-brand-400">Client Service 01</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Product Viability Simulator</h2>
-        <p class="text-slate-400 text-sm mt-2">Test your product hypothesis against live market friction and purchasing sentiment.</p>
+        <span class="text-xs font-mono uppercase tracking-widest text-brand-400">Enterprise Service 01</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Product Architecture & Viability Test</h2>
+        <p class="text-slate-400 text-sm mt-2">Validate product parameters against the Boundedly Rational Consumer Continuum before capital deployment.</p>
       </div>
       <div class="mt-4 md:mt-0">
         <span class="text-xs font-mono px-3 py-1 rounded-full bg-brand-500/20 text-brand-400 border border-brand-500/30">
-          Interactive Engine
+          Algorithmic Assessment
         </span>
       </div>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-      <!-- Input Form -->
-      <div class="lg:col-span-5 glass-panel p-8 rounded-2xl border border-white/10">
+      <!-- Input Parameters -->
+      <div class="lg:col-span-5 glass-card p-8 rounded-2xl border border-white/10">
         <h3 class="text-lg font-bold text-white mb-6 flex items-center gap-2">
-          <i data-lucide="sliders" class="w-5 h-5 text-brand-400"></i> Product Parameters
+          <i data-lucide="box" class="w-5 h-5 text-brand-400"></i> Product Specifications
         </h3>
 
         <div class="space-y-5">
           <div>
-            <label class="block text-xs font-medium text-slate-300 uppercase font-mono mb-2">Target Market / Nation</label>
-            <select id="simCountry" class="w-full bg-surface-800 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500">
-              <option value="IN">India (High Growth / Mixed Elasticity)</option>
-              <option value="US">United States (High Consumption / Volatile Sentiment)</option>
-              <option value="GB">United Kingdom (Cost of Living Pressure)</option>
-              <option value="DE">Germany (Industrial Resilience / Defensive)</option>
+            <label class="block text-xs font-medium text-slate-300 uppercase font-mono mb-2">Target Consumer Type (BRCCC)</label>
+            <select id="simConsumerType" class="w-full bg-surface-850 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500">
+              <option value="type2">Type 2: Innovative & Tech-Seeking Co-Creators</option>
+              <option value="type3">Type 3: Ethical & Sustainability Conscious</option>
+              <option value="type5">Type 5: Boundedly Rational but Actively Learning</option>
+              <option value="type6" selected>Type 6: Nudgeable (Default-Dependent)</option>
+              <option value="type7">Type 7: Vulnerable with Protective Coping Skills</option>
+              <option value="type8">Type 8: High Vulnerability / High Cognitive Strain</option>
             </select>
           </div>
 
           <div>
             <label class="block text-xs font-medium text-slate-300 uppercase font-mono mb-2">Product Category</label>
-            <select id="simCategory" class="w-full bg-surface-800 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500">
-              <option value="wellness">Mental Well-Being & Stress Relief</option>
-              <option value="fmcg">Essential Consumer Goods / Food</option>
-              <option value="edtech">Vocational EdTech & Upskilling</option>
-              <option value="luxury">Discretionary Luxury & Lifestyle</option>
-              <option value="saas">Productivity / Enterprise Software</option>
+            <select id="simCategory" class="w-full bg-surface-850 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500">
+              <option value="wellness">Mental Well-Being, Sleep & Cognitive Ergonomics</option>
+              <option value="fmcg">Essential Consumer Goods / Food Substitutes</option>
+              <option value="edtech">Skill Acquisition & Micro-Income Enablers</option>
+              <option value="saas">Productivity / Autonomous Business Workflow</option>
+              <option value="luxury">Discretionary Premium Goods</option>
             </select>
           </div>
 
           <div>
-            <label class="block text-xs font-medium text-slate-300 uppercase font-mono mb-2">Price Architecture</label>
-            <select id="simPrice" class="w-full bg-surface-800 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500">
-              <option value="budget">Value-First / Low Ticket (< $15 / mo)</option>
-              <option value="mid">Mid-Market Standard ($15 - $75 / mo)</option>
-              <option value="premium">Premium / Enterprise ($75+ / mo)</option>
+            <label class="block text-xs font-medium text-slate-300 uppercase font-mono mb-2">Pricing & Commitment Tier</label>
+            <select id="simPricing" class="w-full bg-surface-850 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500">
+              <option value="micro">Micro-Transaction / Flexible Sachet (< $10/mo)</option>
+              <option value="standard">Standard Mid-Tier Monthly ($20 - $60/mo)</option>
+              <option value="high">High-Ticket / Annual Lock-In ($100+/mo)</option>
             </select>
           </div>
 
           <div>
-            <label class="block text-xs font-medium text-slate-300 uppercase font-mono mb-2">Primary Target Audience</label>
-            <select id="simAudience" class="w-full bg-surface-800 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500">
-              <option value="students">Youth & Disconnected Cohorts (NEET Risk)</option>
-              <option value="professionals">High-Stress Corporate Workforce</option>
-              <option value="families">Middle-Income Budget Households</option>
+            <label class="block text-xs font-medium text-slate-300 uppercase font-mono mb-2">Onboarding Complexity Level</label>
+            <select id="simFriction" class="w-full bg-surface-850 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-brand-500">
+              <option value="low">Zero-Friction (Single Sign-On / Instant Trial)</option>
+              <option value="medium">Moderate (Account Setup + Short Questionnaire)</option>
+              <option value="high">High (Extensive Document Verification / Manual Sync)</option>
             </select>
           </div>
 
-          <button onclick="calculateViability()" class="w-full mt-4 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm shadow-lg shadow-brand-600/30 transition flex items-center justify-center gap-2">
-            <i data-lucide="play" class="w-4 h-4"></i> Run Intelligence Diagnostic
+          <button onclick="runProductSimulation()" class="w-full mt-4 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm shadow-lg shadow-brand-600/30 transition flex items-center justify-center gap-2">
+            <i data-lucide="cpu" class="w-4 h-4"></i> Run Behavioral Viability Engine
           </button>
         </div>
       </div>
 
-      <!-- Output Analysis Panel -->
-      <div class="lg:col-span-7 glass-panel p-8 rounded-2xl border border-white/10 flex flex-col justify-between" id="simOutput">
+      <!-- Analysis Results Panel -->
+      <div class="lg:col-span-7 glass-card p-8 rounded-2xl border border-white/10 flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between border-b border-white/5 pb-4 mb-6">
             <div>
-              <span class="text-xs font-mono text-slate-400 uppercase">Strategic Diagnostic Outcome</span>
-              <h4 class="text-xl font-bold text-white mt-1">Viability & Market Fit Analysis</h4>
+              <span class="text-xs font-mono text-slate-400 uppercase">Diagnostic Output</span>
+              <h4 class="text-xl font-bold text-white mt-1">Behavioral Viability & Friction Profile</h4>
             </div>
-            <div id="viabilityPill" class="px-4 py-1.5 rounded-full text-xs font-bold font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
-              OPTIMAL FIT
+            <div id="prodPill" class="px-4 py-1.5 rounded-full text-xs font-bold font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
+              STRONG FIT
             </div>
           </div>
 
           <div class="grid grid-cols-2 gap-4 mb-6">
-            <div class="p-4 rounded-xl bg-surface-800/80 border border-white/5">
-              <span class="text-xs font-mono text-slate-400 uppercase">Viability Index</span>
-              <div id="viabilityScore" class="text-3xl font-extrabold text-white mt-1">84 / 100</div>
+            <div class="p-4 rounded-xl bg-surface-900 border border-white/5">
+              <span class="text-xs font-mono text-slate-400 uppercase">Product Viability Score</span>
+              <div id="prodScore" class="text-3xl font-extrabold text-white mt-1">82 / 100</div>
             </div>
-            <div class="p-4 rounded-xl bg-surface-800/80 border border-white/5">
-              <span class="text-xs font-mono text-slate-400 uppercase">Adoption Friction</span>
-              <div id="frictionLevel" class="text-3xl font-extrabold text-emerald-400 mt-1">Low (18%)</div>
+            <div class="p-4 rounded-xl bg-surface-900 border border-white/5">
+              <span class="text-xs font-mono text-slate-400 uppercase">Adoption Resistance Index</span>
+              <div id="prodResistance" class="text-3xl font-extrabold text-emerald-400 mt-1">Low (18%)</div>
             </div>
           </div>
 
           <div class="space-y-4">
-            <h5 class="text-xs font-mono uppercase tracking-wider text-slate-300">Actionable Execution Directives</h5>
-            <div class="p-4 rounded-xl bg-surface-800/40 border border-white/5 text-sm text-slate-300 leading-relaxed" id="recommendation1">
-              • <strong>Pricing Strategy:</strong> Market conditions favor transparent subscription models with zero onboarding lock-in. Avoid high upfront ticket barriers.
+            <h5 class="text-xs font-mono uppercase tracking-wider text-slate-300">Behaviorally Informed Recommendations</h5>
+            <div class="p-4 rounded-xl bg-surface-900/50 border border-white/5 text-sm text-slate-300 leading-relaxed" id="prodRec1">
+              • <strong>Choice Architecture:</strong> High reliance on default settings detected. Make your core utility the pre-selected option to capture the 72% of users paralyzed by choice proliferation.
             </div>
-            <div class="p-4 rounded-xl bg-surface-800/40 border border-white/5 text-sm text-slate-300 leading-relaxed" id="recommendation2">
-              • <strong>Psychological Hook:</strong> Emphasize friction reduction and personal autonomy rather than prestige or aspirational lifestyle cues.
+            <div class="p-4 rounded-xl bg-surface-900/50 border border-white/5 text-sm text-slate-300 leading-relaxed" id="prodRec2">
+              • <strong>Price Transparency:</strong> Avoid shrouded attributes or surprise add-ons at checkout. Frame costs as transparent cost-per-day metrics to eliminate buyer remorse.
             </div>
           </div>
         </div>
 
         <div class="pt-6 border-t border-white/5 mt-6 flex items-center justify-between">
-          <span class="text-xs text-slate-400">Want custom market modeling for your exact prototype?</span>
+          <span class="text-xs text-slate-400">Need full market testing with representative panels?</span>
           <a href="#pricing" class="text-xs font-semibold text-brand-400 hover:text-brand-300 flex items-center gap-1">
-            Order Custom Validation <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+            Commission Custom Study <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
           </a>
         </div>
       </div>
@@ -334,98 +329,202 @@
   </section>
 
   <!-- ======================================================== -->
-  <!-- INTERACTIVE TOOL 2: ORGANIZATIONAL RESILIENCE AUDIT      -->
+  <!-- SERVICE 02: SLUDGE AUDIT DIAGNOSTIC                      -->
   <!-- ======================================================== -->
-  <section id="wellness-audit" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
+  <section id="sludge-audit" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
       <div>
-        <span class="text-xs font-mono uppercase tracking-widest text-indigo-400">Client Service 02</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Organizational Resilience Audit</h2>
-        <p class="text-slate-400 text-sm mt-2">Evaluate institutional burnout risk and collective psychological fatigue.</p>
+        <span class="text-xs font-mono uppercase tracking-widest text-indigo-400">Enterprise Service 02</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">PCI Sludge & Impedance Audit</h2>
+        <p class="text-slate-400 text-sm mt-2">Quantify friction across Process, Communication, and Inclusivity (Cowen, Kannan, & Soman Scorecard Model).</p>
       </div>
       <div class="mt-4 md:mt-0">
         <span class="text-xs font-mono px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-400 border border-indigo-500/30">
-          Psychology Diagnostic
+          Process Diagnostic
         </span>
       </div>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-      <!-- Diagnostic Form -->
-      <div class="lg:col-span-5 glass-panel p-8 rounded-2xl border border-white/10">
+      <!-- Questionnaire -->
+      <div class="lg:col-span-5 glass-card p-8 rounded-2xl border border-white/10">
         <h3 class="text-lg font-bold text-white mb-6 flex items-center gap-2">
-          <i data-lucide="user-check" class="w-5 h-5 text-indigo-400"></i> Environmental Inputs
+          <i data-lucide="shield-alert" class="w-5 h-5 text-indigo-400"></i> Friction Indicators
         </h3>
 
         <div class="space-y-6">
           <div>
             <div class="flex justify-between text-xs font-mono mb-2">
-              <span class="text-slate-300 uppercase">Weekly Overtime Intensity</span>
-              <span id="otVal" class="text-indigo-400 font-bold">8 hrs/wk</span>
+              <span class="text-slate-300 uppercase">Process: Steps & Required Forms</span>
+              <span id="pStepsVal" class="text-indigo-400 font-bold">4 Interactions</span>
             </div>
-            <input type="range" id="auditOT" min="0" max="25" value="8" oninput="document.getElementById('otVal').innerText = this.value + ' hrs/wk'" class="w-full accent-indigo-500 bg-surface-700 h-2 rounded-lg cursor-pointer">
+            <input type="range" id="auditSteps" min="1" max="10" value="4" oninput="document.getElementById('pStepsVal').innerText = this.value + ' Interactions'" class="w-full accent-indigo-500 bg-surface-700 h-2 rounded-lg cursor-pointer">
           </div>
 
           <div>
             <div class="flex justify-between text-xs font-mono mb-2">
-              <span class="text-slate-300 uppercase">After-Hours Communication Frequency</span>
-              <span id="cadenceVal" class="text-indigo-400 font-bold">Frequent</span>
+              <span class="text-slate-300 uppercase">Communication: Disclosure Clarity</span>
+              <span id="pCommVal" class="text-indigo-400 font-bold">Standard Text (Moderate Jargon)</span>
             </div>
-            <input type="range" id="auditCadence" min="1" max="4" value="3" oninput="updateCadenceLabel(this.value)" class="w-full accent-indigo-500 bg-surface-700 h-2 rounded-lg cursor-pointer">
+            <input type="range" id="auditComm" min="1" max="3" value="2" oninput="updateCommLabel(this.value)" class="w-full accent-indigo-500 bg-surface-700 h-2 rounded-lg cursor-pointer">
           </div>
 
           <div>
             <div class="flex justify-between text-xs font-mono mb-2">
-              <span class="text-slate-300 uppercase">Psychological Safety Baseline (1-10)</span>
-              <span id="safetyVal" class="text-indigo-400 font-bold">6 / 10</span>
+              <span class="text-slate-300 uppercase">Inclusivity: Emotional Friction / Stigma</span>
+              <span id="pIncVal" class="text-indigo-400 font-bold">Moderate Hesitation</span>
             </div>
-            <input type="range" id="auditSafety" min="1" max="10" value="6" oninput="document.getElementById('safetyVal').innerText = this.value + ' / 10'" class="w-full accent-indigo-500 bg-surface-700 h-2 rounded-lg cursor-pointer">
+            <input type="range" id="auditInclusivity" min="1" max="3" value="2" oninput="updateIncLabel(this.value)" class="w-full accent-indigo-500 bg-surface-700 h-2 rounded-lg cursor-pointer">
           </div>
 
-          <button onclick="calculateAudit()" class="w-full py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm shadow-lg shadow-indigo-600/30 transition flex items-center justify-center gap-2">
-            <i data-lucide="activity" class="w-4 h-4"></i> Generate Clinical Health Score
+          <button onclick="runSludgeAudit()" class="w-full py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm shadow-lg shadow-indigo-600/30 transition flex items-center justify-center gap-2">
+            <i data-lucide="search" class="w-4 h-4"></i> Calculate PCI Sludge Matrix
           </button>
         </div>
       </div>
 
-      <!-- Audit Results Panel -->
-      <div class="lg:col-span-7 glass-panel p-8 rounded-2xl border border-white/10 flex flex-col justify-between">
+      <!-- Sludge Audit Results Panel -->
+      <div class="lg:col-span-7 glass-card p-8 rounded-2xl border border-white/10 flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between border-b border-white/5 pb-4 mb-6">
             <div>
-              <span class="text-xs font-mono text-slate-400 uppercase">Organizational Diagnostic</span>
-              <h4 class="text-xl font-bold text-white mt-1">Institutional Vulnerability Matrix</h4>
+              <span class="text-xs font-mono text-slate-400 uppercase">PCI Scorecard Results</span>
+              <h4 class="text-xl font-bold text-white mt-1">Channel Impedance Breakdown</h4>
             </div>
-            <div id="burnoutPill" class="px-4 py-1.5 rounded-full text-xs font-bold font-mono bg-amber-500/10 text-amber-400 border border-amber-500/30">
-              MODERATE RISK
+            <div id="sludgePill" class="px-4 py-1.5 rounded-full text-xs font-bold font-mono bg-amber-500/10 text-amber-400 border border-amber-500/30">
+              ELEVATED SLUDGE
             </div>
           </div>
 
-          <div class="grid grid-cols-2 gap-4 mb-6">
-            <div class="p-4 rounded-xl bg-surface-800/80 border border-white/5">
-              <span class="text-xs font-mono text-slate-400 uppercase">Burnout Susceptibility</span>
-              <div id="burnoutScore" class="text-3xl font-extrabold text-amber-400 mt-1">54 / 100</div>
+          <div class="grid grid-cols-3 gap-4 mb-6 text-center">
+            <div class="p-4 rounded-xl bg-surface-900 border border-white/5">
+              <span class="text-xs font-mono text-slate-400 uppercase">Process (P)</span>
+              <div id="scoreP" class="text-2xl font-bold text-white mt-1">55%</div>
             </div>
-            <div class="p-4 rounded-xl bg-surface-800/80 border border-white/5">
-              <span class="text-xs font-mono text-slate-400 uppercase">Attrition Probability (90-Day)</span>
-              <div id="attritionRisk" class="text-3xl font-extrabold text-white mt-1">22.4%</div>
+            <div class="p-4 rounded-xl bg-surface-900 border border-white/5">
+              <span class="text-xs font-mono text-slate-400 uppercase">Comm (C)</span>
+              <div id="scoreC" class="text-2xl font-bold text-white mt-1">65%</div>
+            </div>
+            <div class="p-4 rounded-xl bg-surface-900 border border-white/5">
+              <span class="text-xs font-mono text-slate-400 uppercase">Inclusivity (I)</span>
+              <div id="scoreI" class="text-2xl font-bold text-white mt-1">50%</div>
             </div>
           </div>
 
           <div class="space-y-4">
-            <h5 class="text-xs font-mono uppercase tracking-wider text-slate-300">Prescribed Psychosocial Interventions</h5>
-            <div class="p-4 rounded-xl bg-surface-800/40 border border-white/5 text-sm text-slate-300 leading-relaxed" id="auditRec1">
-              • <strong>Cognitive Boundary Windows:</strong> Implement strict digital silence between 8 PM and 8 AM to facilitate parasympathetic nervous system recovery.
+            <h5 class="text-xs font-mono uppercase tracking-wider text-slate-300">Prescribed Sludge-Busting Protocol</h5>
+            <div class="p-4 rounded-xl bg-surface-900/50 border border-white/5 text-sm text-slate-300 leading-relaxed" id="sludgeRec1">
+              • <strong>Re-Engagement De-duplication:</strong> Eliminate redundant data entry across touchpoints. Every repeated question decreases final task completion by up to 14%.
             </div>
-            <div class="p-4 rounded-xl bg-surface-800/40 border border-white/5 text-sm text-slate-300 leading-relaxed" id="auditRec2">
-              • <strong>Psychological Air-Gapping:</strong> Disconnect internal deadlines from ambient macroeconomic panic through transparent executive communication.
+            <div class="p-4 rounded-xl bg-surface-900/50 border border-white/5 text-sm text-slate-300 leading-relaxed" id="sludgeRec2">
+              • <strong>Cognitive De-shrouding:</strong> Convert paragraph-dense terms of service into bulleted, visual decision aids (Grade 5 comprehension level).
             </div>
           </div>
         </div>
 
         <div class="pt-6 border-t border-white/5 mt-6 flex items-center justify-between">
-          <span class="text-xs text-slate-400">Require an on-site executive diagnostic workshop?</span>
+          <span class="text-xs text-slate-400">Want an independent certified audit team to review your workflow?</span>
           <a href="#pricing" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+            Request Formal Audit <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- SERVICE 03: ORGANIZATIONAL RESILIENCE AUDIT              -->
+  <!-- ======================================================== -->
+  <section id="org-resilience" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div>
+        <span class="text-xs font-mono uppercase tracking-widest text-cyan-400">Enterprise Service 03</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Organizational Resilience & Well-Being</h2>
+        <p class="text-slate-400 text-sm mt-2">Diagnose cognitive overload, communication fatigue, and attrition exposure using I-O psychological models.</p>
+      </div>
+      <div class="mt-4 md:mt-0">
+        <span class="text-xs font-mono px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">
+          I-O Psychology Engine
+        </span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <!-- Input Controls -->
+      <div class="lg:col-span-5 glass-card p-8 rounded-2xl border border-white/10">
+        <h3 class="text-lg font-bold text-white mb-6 flex items-center gap-2">
+          <i data-lucide="activity" class="w-5 h-5 text-cyan-400"></i> Workplace Indicators
+        </h3>
+
+        <div class="space-y-6">
+          <div>
+            <div class="flex justify-between text-xs font-mono mb-2">
+              <span class="text-slate-300 uppercase">Weekly Overtime Hours (Team Avg)</span>
+              <span id="orgOTVal" class="text-cyan-400 font-bold">6 hrs/wk</span>
+            </div>
+            <input type="range" id="orgOT" min="0" max="20" value="6" oninput="document.getElementById('orgOTVal').innerText = this.value + ' hrs/wk'" class="w-full accent-cyan-500 bg-surface-700 h-2 rounded-lg cursor-pointer">
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs font-mono mb-2">
+              <span class="text-slate-300 uppercase">After-Hours Messaging Expectations</span>
+              <span id="orgMsgVal" class="text-cyan-400 font-bold">Frequent (Expected Response)</span>
+            </div>
+            <input type="range" id="orgMsg" min="1" max="4" value="3" oninput="updateMsgLabel(this.value)" class="w-full accent-cyan-500 bg-surface-700 h-2 rounded-lg cursor-pointer">
+          </div>
+
+          <div>
+            <div class="flex justify-between text-xs font-mono mb-2">
+              <span class="text-slate-300 uppercase">Internal Psychological Safety (1-10)</span>
+              <span id="orgSafetyVal" class="text-cyan-400 font-bold">6 / 10</span>
+            </div>
+            <input type="range" id="orgSafety" min="1" max="10" value="6" oninput="document.getElementById('orgSafetyVal').innerText = this.value + ' / 10'" class="w-full accent-cyan-500 bg-surface-700 h-2 rounded-lg cursor-pointer">
+          </div>
+
+          <button onclick="runOrgDiagnostic()" class="w-full py-3.5 rounded-xl bg-cyan-600 hover:bg-cyan-500 text-white font-semibold text-sm shadow-lg shadow-cyan-600/30 transition flex items-center justify-center gap-2">
+            <i data-lucide="clipboard-check" class="w-4 h-4"></i> Run Occupational Stress Diagnostic
+          </button>
+        </div>
+      </div>
+
+      <!-- Output Panel -->
+      <div class="lg:col-span-7 glass-card p-8 rounded-2xl border border-white/10 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between border-b border-white/5 pb-4 mb-6">
+            <div>
+              <span class="text-xs font-mono text-slate-400 uppercase">Psychological State Analysis</span>
+              <h4 class="text-xl font-bold text-white mt-1">Burnout & Attrition Exposure</h4>
+            </div>
+            <div id="orgPill" class="px-4 py-1.5 rounded-full text-xs font-bold font-mono bg-amber-500/10 text-amber-400 border border-amber-500/30">
+              MODERATE RISK
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div class="p-4 rounded-xl bg-surface-900 border border-white/5">
+              <span class="text-xs font-mono text-slate-400 uppercase">Burnout Vulnerability</span>
+              <div id="orgBurnoutScore" class="text-3xl font-extrabold text-amber-400 mt-1">52 / 100</div>
+            </div>
+            <div class="p-4 rounded-xl bg-surface-900 border border-white/5">
+              <span class="text-xs font-mono text-slate-400 uppercase">Predicted 90-Day Attrition</span>
+              <div id="orgAttritionScore" class="text-3xl font-extrabold text-white mt-1">18.5%</div>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h5 class="text-xs font-mono uppercase tracking-wider text-slate-300">Psychologist-Vetted Interventions</h5>
+            <div class="p-4 rounded-xl bg-surface-900/50 border border-white/5 text-sm text-slate-300 leading-relaxed" id="orgRec1">
+              • <strong>Asynchronous Quiet Windows:</strong> Implement strict digital boundaries between 8 PM and 8 AM to permit prefrontal cortex recovery and suppress chronic cortisol elevation.
+            </div>
+            <div class="p-4 rounded-xl bg-surface-900/50 border border-white/5 text-sm text-slate-300 leading-relaxed" id="orgRec2">
+              • <strong>Micro-Decompression Rituals:</strong> Introduce mandatory 5-minute pauses between back-to-back virtual meetings to stop cumulative cognitive fatigue.
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-6 border-t border-white/5 mt-6 flex items-center justify-between">
+          <span class="text-xs text-slate-400">Need comprehensive 360-degree leadership assessment?</span>
+          <a href="#pricing" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1">
             Book Organizational Retainer <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
           </a>
         </div>
@@ -434,84 +533,84 @@
   </section>
 
   <!-- ======================================================== -->
-  <!-- PRICING & COMMERCIAL TIERS                               -->
+  <!-- COMMERCIAL PRICING & SERVICE TIERS                       -->
   <!-- ======================================================== -->
   <section id="pricing" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
     <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-xs font-mono uppercase tracking-widest text-brand-400 mb-3">Enterprise Access & Retainers</h2>
-      <p class="text-3xl sm:text-4xl font-bold text-white">Commercial Intelligence Plans</p>
-      <p class="mt-4 text-slate-400 text-sm sm:text-base">Institutional-grade data feeds, custom market simulators, and executive advisory retainers.</p>
+      <h2 class="text-xs font-mono uppercase tracking-widest text-brand-400 mb-3">Enterprise Access & Engagement</h2>
+      <p class="text-3xl sm:text-4xl font-bold text-white">Commercial Intelligence Retainers</p>
+      <p class="mt-4 text-slate-400 text-sm sm:text-base">Commission tailored behavioral modeling, formal sludge elimination audits, and executive advisory services.</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Tier 1: Starter -->
-      <div class="glass-panel p-8 rounded-2xl border border-white/5 flex flex-col justify-between">
+      <!-- Tier 1: Starter Validation -->
+      <div class="glass-card p-8 rounded-2xl border border-white/5 flex flex-col justify-between">
         <div>
           <span class="text-xs font-mono text-slate-400 uppercase tracking-widest">Early Stage</span>
-          <h3 class="text-xl font-bold text-white mt-1">Validation Tier</h3>
+          <h3 class="text-xl font-bold text-white mt-1">Product Validation Tier</h3>
           <div class="mt-6 flex items-baseline gap-1">
             <span class="text-4xl font-extrabold text-white">$499</span>
             <span class="text-sm text-slate-400">/ month</span>
           </div>
-          <p class="mt-4 text-xs text-slate-400 leading-relaxed">For founders, solo researchers, and agile product teams testing market viability.</p>
+          <p class="mt-4 text-xs text-slate-400 leading-relaxed">For product managers and startup founders testing market fit and consumer elasticity.</p>
           <hr class="border-white/5 my-6">
           <ul class="space-y-3 text-xs text-slate-300">
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Access to 5 Global Territory Feeds</li>
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> 100 Simulator Runs / Month</li>
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Standard CSV Macro Reports</li>
+            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Full Access to Product Viability Simulator</li>
+            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Up to 100 Algorithmic Simulations / Month</li>
+            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Automated Briefing Exports (TXT/CSV)</li>
           </ul>
         </div>
-        <button onclick="handlePurchase('Validation Tier')" class="mt-8 w-full py-3 rounded-xl bg-surface-700 hover:bg-surface-600 text-white font-semibold text-xs border border-white/10 transition">
-          Select Validation Plan
+        <button onclick="openCheckout('Product Validation Plan ($499/mo)')" class="mt-8 w-full py-3 rounded-xl bg-surface-800 hover:bg-surface-700 text-white font-semibold text-xs border border-white/10 transition">
+          Commission Validation Plan
         </button>
       </div>
 
       <!-- Tier 2: Corporate Pro -->
-      <div class="glass-panel p-8 rounded-2xl neon-border relative flex flex-col justify-between transform md:-translate-y-2">
+      <div class="glass-card p-8 rounded-2xl border border-brand-500/50 relative flex flex-col justify-between transform md:-translate-y-2 shadow-xl shadow-brand-500/10">
         <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
           <span class="px-3 py-1 rounded-full bg-brand-600 text-[10px] font-bold font-mono tracking-wider text-white uppercase shadow-md shadow-brand-600/50">
             Most Popular
           </span>
         </div>
         <div>
-          <span class="text-xs font-mono text-brand-400 uppercase tracking-widest">Growth & Mid-Market</span>
-          <h3 class="text-xl font-bold text-white mt-1">Enterprise Pro</h3>
+          <span class="text-xs font-mono text-brand-400 uppercase tracking-widest">Growth & Scale</span>
+          <h3 class="text-xl font-bold text-white mt-1">Enterprise Behavioral Suite</h3>
           <div class="mt-6 flex items-baseline gap-1">
             <span class="text-4xl font-extrabold text-white">$1,499</span>
             <span class="text-sm text-slate-400">/ month</span>
           </div>
-          <p class="mt-4 text-xs text-slate-400 leading-relaxed">For scaling companies and organizations requiring deep psychosocial tracking.</p>
+          <p class="mt-4 text-xs text-slate-400 leading-relaxed">For established consumer brands and companies optimizing workforce resilience.</p>
           <hr class="border-white/5 my-6">
           <ul class="space-y-3 text-xs text-slate-300">
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Full Multi-Country Real-Time Feeds</li>
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Unlimited Product Viability Simulations</li>
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Full Organizational Resilience Diagnostic</li>
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Monthly Strategic Advisory Debrief (1 hr)</li>
+            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Unlimited Product & Sludge Simulations</li>
+            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Quarterly Formal PCI Sludge Audit</li>
+            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Full Organizational Resilience Dashboard</li>
+            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Monthly Strategic Advisory Debrief with I-O Partner</li>
           </ul>
         </div>
-        <button onclick="handlePurchase('Enterprise Pro')" class="mt-8 w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-xs shadow-lg shadow-brand-600/30 transition">
-          Deploy Enterprise Pro
+        <button onclick="openCheckout('Enterprise Behavioral Suite ($1,499/mo)')" class="mt-8 w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-xs shadow-lg shadow-brand-600/30 transition">
+          Deploy Enterprise Suite
         </button>
       </div>
 
-      <!-- Tier 3: Institutional Retainer -->
-      <div class="glass-panel p-8 rounded-2xl border border-white/5 flex flex-col justify-between">
+      <!-- Tier 3: Custom Retainer -->
+      <div class="glass-card p-8 rounded-2xl border border-white/5 flex flex-col justify-between">
         <div>
           <span class="text-xs font-mono text-slate-400 uppercase tracking-widest">Institutions & VCs</span>
-          <h3 class="text-xl font-bold text-white mt-1">Strategic Retainer</h3>
+          <h3 class="text-xl font-bold text-white mt-1">Strategic Advisory Retainer</h3>
           <div class="mt-6 flex items-baseline gap-1">
             <span class="text-4xl font-extrabold text-white">Custom</span>
           </div>
-          <p class="mt-4 text-xs text-slate-400 leading-relaxed">Dedicated consulting, custom epidemiological models, and on-site executive briefings.</p>
+          <p class="mt-4 text-xs text-slate-400 leading-relaxed">Dedicated randomized field trials (RCTs), custom behavioral engineering, and executive workshops.</p>
           <hr class="border-white/5 my-6">
           <ul class="space-y-3 text-xs text-slate-300">
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Custom API Integrations (Internal Data + NEXUS)</li>
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> On-Site Clinical Psychology Workshops</li>
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> 24/7 Dedicated Strategic Account Director</li>
+            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Custom In-Situ Randomized Controlled Experiments</li>
+            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> On-Site Clinical Psychology & HR Leadership Audits</li>
+            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Dedicated PhD Behavioral Scientist on Retainer</li>
           </ul>
         </div>
-        <button onclick="handlePurchase('Strategic Retainer')" class="mt-8 w-full py-3 rounded-xl bg-surface-700 hover:bg-surface-600 text-white font-semibold text-xs border border-white/10 transition">
-          Contact Advisory Partner
+        <button onclick="openCheckout('Custom Advisory Retainer')" class="mt-8 w-full py-3 rounded-xl bg-surface-800 hover:bg-surface-700 text-white font-semibold text-xs border border-white/10 transition">
+          Contact Managing Partner
         </button>
       </div>
     </div>
@@ -522,126 +621,171 @@
   <!-- ======================================================== -->
   <footer class="border-t border-white/5 py-12 px-6 max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-slate-500 font-mono">
     <div>
-      © 2026 NEXUS Predictive Systems Inc. All rights reserved.
+      © 2026 BE-ORG Behavioral Intelligence. Based on verified research in I-O Psychology and Behavioral Economics.
     </div>
     <div class="flex items-center gap-6">
-      <a href="#" class="hover:text-slate-300">Bioethics & Privacy</a>
-      <a href="#" class="hover:text-slate-300">API Documentation</a>
-      <a href="#" class="hover:text-slate-300">Terms of Intelligence Service</a>
+      <a href="#" class="hover:text-slate-300">Ethics & Governance</a>
+      <a href="#" class="hover:text-slate-300">Research Integrity</a>
+      <a href="#" class="hover:text-slate-300">Terms of Service</a>
     </div>
   </footer>
 
   <!-- ======================================================== -->
-  <!-- JAVASCRIPT LOGIC ENGINES                                 -->
+  <!-- JAVASCRIPT ALGORITHMS & LOGIC                            -->
   <!-- ======================================================== -->
   <script>
-    // Initialize Lucide Icons
     lucide.createIcons();
 
-    // 1. Product Viability Algorithm
-    function calculateViability() {
-      const country = document.getElementById('simCountry').value;
+    // 1. Product Viability Simulation Algorithm
+    function runProductSimulation() {
+      const consumer = document.getElementById('simConsumerType').value;
       const category = document.getElementById('simCategory').value;
-      const price = document.getElementById('simPrice').value;
-      const audience = document.getElementById('simAudience').value;
+      const pricing = document.getElementById('simPricing').value;
+      const friction = document.getElementById('simFriction').value;
 
       let score = 75;
-      let friction = 20;
+      let resistance = 20;
 
-      // Realistic heuristic logic
-      if (price === 'premium') {
-        score -= 22;
-        friction += 25;
+      // Behavioral interactions
+      if (consumer === 'type6') {
+        // Nudgeable consumers depend heavily on low friction and defaults
+        if (friction === 'low') { score += 12; resistance -= 10; }
+        if (friction === 'high') { score -= 25; resistance += 35; }
+      }
+      if (consumer === 'type8') {
+        // High vulnerability / strained consumers resist high ticket costs
+        if (pricing === 'high') { score -= 30; resistance += 40; }
+        if (pricing === 'micro') { score += 15; resistance -= 12; }
       }
       if (category === 'wellness') {
-        score += 15;
+        // Well-being products resonate strongly with moderate pricing
+        score += 8;
       }
-      if (category === 'fmcg' && price === 'budget') {
-        score += 20;
-        friction -= 10;
-      }
-      if (audience === 'students' && price !== 'budget') {
-        score -= 25;
-        friction += 30;
+      if (pricing === 'high') {
+        score -= 15;
+        resistance += 25;
       }
 
-      // Bound between 10 and 96
-      score = Math.max(12, Math.min(96, score));
-      friction = Math.max(8, Math.min(88, friction));
+      score = Math.max(15, Math.min(96, score));
+      resistance = Math.max(8, Math.min(88, resistance));
 
-      // Update DOM
-      document.getElementById('viabilityScore').innerText = `${score} / 100`;
-      document.getElementById('frictionLevel').innerText = `${friction > 40 ? 'High' : 'Low'} (${friction}%)`;
+      document.getElementById('prodScore').innerText = `${score} / 100`;
+      document.getElementById('prodResistance').innerText = `${resistance > 40 ? 'High' : 'Low'} (${resistance}%)`;
 
-      const pill = document.getElementById('viabilityPill');
-      const rec1 = document.getElementById('recommendation1');
-      const rec2 = document.getElementById('recommendation2');
+      const pill = document.getElementById('prodPill');
+      const rec1 = document.getElementById('prodRec1');
+      const rec2 = document.getElementById('prodRec2');
 
       if (score >= 75) {
         pill.className = "px-4 py-1.5 rounded-full text-xs font-bold font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30";
         pill.innerText = "OPTIMAL FIT";
-        rec1.innerHTML = "• <strong>Positioning:</strong> High current consumer resonance. Prioritize direct digital conversion and self-serve onboarding.";
-        rec2.innerHTML = "• <strong>Pricing Model:</strong> Consumers exhibit low friction in this tier. Annual discount bundling will lock in multi-quarter retention.";
+        rec1.innerHTML = "• <strong>Choice Architecture:</strong> High resonance with consumer mental models. Position the core utility as the pre-selected default option.";
+        rec2.innerHTML = "• <strong>Pricing Model:</strong> Low adoption resistance. Annual discounting and automatic continuity plans will maximize lifetime customer retention.";
       } else if (score >= 50) {
         pill.className = "px-4 py-1.5 rounded-full text-xs font-bold font-mono bg-amber-500/10 text-amber-400 border border-amber-500/30";
         pill.innerText = "CONDITIONAL FIT";
-        rec1.innerHTML = "• <strong>Pricing Adjustments:</strong> High price sensitivity detected. Introduce smaller entry tiers or micro-commitments to mitigate drop-off.";
-        rec2.innerHTML = "• <strong>Channel Mix:</strong> Lean heavily on social validation and transparent money-back guarantees to build trust.";
+        rec1.innerHTML = "• <strong>Friction Barrier:</strong> High onboarding drop-off risk. Reduce mandatory form fields during the initial interaction to narrow the intention-action gap.";
+        rec2.innerHTML = "• <strong>Price Re-framing:</strong> Split monthly costs into granular daily equivalents to bypass loss-aversion mental accounting.";
       } else {
         pill.className = "px-4 py-1.5 rounded-full text-xs font-bold font-mono bg-rose-500/10 text-rose-400 border border-rose-500/30";
-        pill.innerText = "ELEVATED RESISTANCE";
-        rec1.innerHTML = "• <strong>Market Mismatch:</strong> Current living costs in this demographic resist discretionary spending at this price point.";
-        rec2.innerHTML = "• <strong>Strategic Pivot:</strong> Pivot packaging toward essential utility or create a freemium lead magnet before requesting payment.";
+        pill.innerText = "HIGH FRICTION";
+        rec1.innerHTML = "• <strong>Market Mismatch:</strong> Target audience exhibits acute price and cognitive sensitivity. Discretionary spending resistance is severe.";
+        rec2.innerHTML = "• <strong>Strategic Pivot:</strong> Convert to a micro-sachet format or offer an unbundled entry product before requesting long-term commitments.";
       }
     }
 
-    // 2. Organizational Resilience Algorithm
-    function updateCadenceLabel(val) {
-      const labels = ["", "Never", "Occasional", "Frequent", "Constant / Expected"];
-      document.getElementById('cadenceVal').innerText = labels[val];
+    // 2. Sludge Audit Scorecard Logic
+    function updateCommLabel(val) {
+      const labels = ["", "Vivid & Simplified (Checklists)", "Standard Text (Moderate Jargon)", "Obfuscated / Legalistic Dense Text"];
+      document.getElementById('pCommVal').innerText = labels[val];
+    }
+    function updateIncLabel(val) {
+      const labels = ["", "Zero Stigma / Fully Accessible", "Moderate Hesitation", "High Anxiety / Reluctance to Disclose"];
+      document.getElementById('pIncVal').innerText = labels[val];
     }
 
-    function calculateAudit() {
-      const ot = parseInt(document.getElementById('auditOT').value);
-      const cadence = parseInt(document.getElementById('auditCadence').value);
-      const safety = parseInt(document.getElementById('auditSafety').value);
+    function runSludgeAudit() {
+      const steps = parseInt(document.getElementById('auditSteps').value);
+      const comm = parseInt(document.getElementById('auditComm').value);
+      const inc = parseInt(document.getElementById('auditInclusivity').value);
 
-      // Burnout calculation
-      let burnout = (ot * 2.5) + (cadence * 12) + ((10 - safety) * 4);
-      burnout = Math.max(10, Math.min(95, Math.round(burnout)));
+      // Calculate component scores
+      const pScore = Math.round(Math.max(10, 100 - (steps * 9)));
+      const cScore = Math.round(comm === 1 ? 90 : (comm === 2 ? 65 : 30));
+      const iScore = Math.round(inc === 1 ? 92 : (inc === 2 ? 58 : 28));
 
-      let attrition = (burnout * 0.45).toFixed(1);
+      const composite = Math.round((pScore + cScore + iScore) / 3);
 
-      document.getElementById('burnoutScore').innerText = `${burnout} / 100`;
-      document.getElementById('attritionRisk').innerText = `${attrition}%`;
+      document.getElementById('scoreP').innerText = `${pScore}%`;
+      document.getElementById('scoreC').innerText = `${cScore}%`;
+      document.getElementById('scoreI').innerText = `${iScore}%`;
 
-      const pill = document.getElementById('burnoutPill');
-      const rec1 = document.getElementById('auditRec1');
-      const rec2 = document.getElementById('auditRec2');
+      const pill = document.getElementById('sludgePill');
+      const rec1 = document.getElementById('sludgeRec1');
+      const rec2 = document.getElementById('sludgeRec2');
+
+      if (composite >= 75) {
+        pill.className = "px-4 py-1.5 rounded-full text-xs font-bold font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30";
+        pill.innerText = "STREAMLINED (LOW SLUDGE)";
+        rec1.innerHTML = "• <strong>Process Memory:</strong> Interface efficiently preserves state, preventing customer frustration from redundant data entry.";
+        rec2.innerHTML = "• <strong>Benchmark:</strong> System complies with human cognitive bandwidth; low risk of abandonment.";
+      } else if (composite >= 50) {
+        pill.className = "px-4 py-1.5 rounded-full text-xs font-bold font-mono bg-amber-500/10 text-amber-400 border border-amber-500/30";
+        pill.innerText = "ELEVATED SLUDGE";
+        rec1.innerHTML = "• <strong>Re-Engagement Impedance:</strong> Multi-step verification introduces procrastination loops. Remove at least 2 non-essential steps.";
+        rec2.innerHTML = "• <strong>Communication De-shrouding:</strong> Structure terms and key dates into bulleted checklists rather than narrative paragraphs.";
+      } else {
+        pill.className = "px-4 py-1.5 rounded-full text-xs font-bold font-mono bg-rose-500/10 text-rose-400 border border-rose-500/30";
+        pill.innerText = "ACUTE OBSTRUCTION";
+        rec1.innerHTML = "• <strong>Critical Pipeline Blockage:</strong> Excessive paperwork and complex phrasing exclude non-expert users and depress conversion rates.";
+        rec2.innerHTML = "• <strong>Urgent Remediation:</strong> Implement single-click verification and plain-language guarantees immediately.";
+      }
+    }
+
+    // 3. Organizational Resilience Audit Logic
+    function updateMsgLabel(val) {
+      const labels = ["", "Strict Boundary / Never", "Occasional Emergent", "Frequent (Expected Response)", "Constant 24/7 Connectivity"];
+      document.getElementById('orgMsgVal').innerText = labels[val];
+    }
+
+    function runOrgDiagnostic() {
+      const ot = parseInt(document.getElementById('orgOT').value);
+      const msg = parseInt(document.getElementById('orgMsg').value);
+      const safety = parseInt(document.getElementById('orgSafety').value);
+
+      const burnout = Math.max(10, Math.min(95, Math.round((ot * 2.4) + (msg * 11) + ((10 - safety) * 4.2))));
+      const attrition = (burnout * 0.42).toFixed(1);
+
+      document.getElementById('orgBurnoutScore').innerText = `${burnout} / 100`;
+      document.getElementById('orgAttritionScore').innerText = `${attrition}%`;
+
+      const pill = document.getElementById('orgPill');
+      const rec1 = document.getElementById('orgRec1');
+      const rec2 = document.getElementById('orgRec2');
 
       if (burnout > 65) {
         pill.className = "px-4 py-1.5 rounded-full text-xs font-bold font-mono bg-rose-500/10 text-rose-400 border border-rose-500/30";
-        pill.innerText = "ACUTE STRAIN";
-        rec1.innerHTML = "• <strong>Immediate Executive Mandate:</strong> Enforce complete after-hours communication blackouts to stop prefrontal cortex exhaustion.";
-        rec2.innerHTML = "• <strong>Workload Rebalancing:</strong> Overtime velocity indicates systemic under-resourcing; prioritize task triage over productivity tracking.";
+        pill.innerText = "ACUTE BURNOUT EXPOSURE";
+        rec1.innerHTML = "• <strong>Enforce Communication Blackouts:</strong> Mandate asynchronous boundaries between 8 PM and 8 AM to restore psychological recovery.";
+        rec2.innerHTML = "• <strong>Role & Task De-confliction:</strong> Overtime volume signals systemic workload misallocation. Conduct job analysis to eliminate non-essential tasks.";
       } else if (burnout > 40) {
         pill.className = "px-4 py-1.5 rounded-full text-xs font-bold font-mono bg-amber-500/10 text-amber-400 border border-amber-500/30";
         pill.innerText = "MODERATE STRAIN";
-        rec1.innerHTML = "• <strong>Micro-Restoration Windows:</strong> Mandate 5-minute pauses between consecutive meetings to prevent compounding cognitive drain.";
-        rec2.innerHTML = "• <strong>Psychological Air-Gapping:</strong> Insulate core engineering and product teams from external market anxiety through weekly transparent town halls.";
+        rec1.innerHTML = "• <strong>Meeting Discipline:</strong> Institute 5-minute buffers between consecutive calls to avoid prefrontal cortex exhaustion.";
+        rec2.innerHTML = "• <strong>Psychological Air-Gapping:</strong> Buffer core delivery teams from ambient market turbulence through clear executive communications.";
       } else {
         pill.className = "px-4 py-1.5 rounded-full text-xs font-bold font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30";
         pill.innerText = "RESILIENT EQUILIBRIUM";
-        rec1.innerHTML = "• <strong>High Cohesion:</strong> Team displays strong resilience. Ideal climate for ambitious product sprints and exploratory R&D.";
-        rec2.innerHTML = "• <strong>Retention:</strong> Maintain current psychological safety rhythms to cement competitive organizational advantage.";
+        rec1.innerHTML = "• <strong>High Cohesion:</strong> Team exhibits sustainable recovery rhythms and high trust. Ideal conditions for complex product development.";
+        rec2.innerHTML = "• <strong>Long-Term Maintenance:</strong> Protect established norms as headcount expands.";
       }
     }
 
-    // 3. Paid Client Checkout / Contact Flow
-    function handlePurchase(tier) {
-      const email = prompt(`Enter your business email to provision access to the ${tier}:`);
+    // 4. Commercial Checkout Flow
+    function openCheckout(planTitle) {
+      const email = prompt(`Enter your business email to provision access to the ${planTitle}:`);
       if (email && email.includes('@')) {
-        alert(`Thank you. Provisioning request for [${tier}] logged for ${email}. Our enterprise partner will transmit your client studio credentials within 4 hours.`);
+        alert(`Success: Retainer inquiry for [${planTitle}] submitted for ${email}. A senior behavioral partner will deliver portal credentials and contract terms within 4 business hours.`);
       }
     }
   </script>
