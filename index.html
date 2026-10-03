@@ -3,17 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PSYCH-METRIX | Professional Psychometrics & People Analytics</title>
-  <meta name="description" content="Evidence-based psychological assessment, occupational health diagnostics, and behavioral people analytics for business leaders, entrepreneurs, and medical institutions.">
+  <title>PSYCH-METRIX | Behavioral Science & People Analytics</title>
+  <meta name="description" content="Precision psychometrics, organizational health diagnostics, and human performance architecture. Designed with Apple precision.">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <!-- Tailwind CSS & Lucide Icons -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <script>
     tailwind.config = {
@@ -21,27 +17,31 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-            mono: ['"JetBrains Mono"', 'monospace'],
+            sans: [
+              '-apple-system',
+              'BlinkMacSystemFont',
+              '"SF Pro Display"',
+              '"SF Pro Text"',
+              '"Helvetica Neue"',
+              'Helvetica',
+              'Arial',
+              'sans-serif'
+            ],
+            mono: ['"SF Mono"', 'SFMono-Regular', 'Menlo', 'monospace'],
           },
           colors: {
-            brand: {
-              400: '#818cf8',
-              500: '#6366f1',
-              600: '#4f46e5',
-              700: '#4338ca',
-            },
-            clinical: {
-              400: '#2dd4bf',
-              500: '#14b8a6',
-              600: '#0d9488',
-            },
-            surface: {
-              950: '#07090e',
-              900: '#0d1117',
-              850: '#111622',
-              800: '#161b26',
-              700: '#212636',
+            apple: {
+              black: '#000000',
+              card: '#161617',
+              cardHover: '#1d1d1f',
+              gray: '#86868b',
+              lightGray: '#f5f5f7',
+              blue: '#0071e3',
+              blueHover: '#0077ed',
+              teal: '#2997ff',
+              green: '#30d158',
+              orange: '#ff9f0a',
+              red: '#ff453a',
             }
           }
         }
@@ -50,55 +50,91 @@
   </script>
 
   <style>
-    .hero-glow {
-      background: radial-gradient(circle at 50% 15%, rgba(99, 102, 241, 0.15) 0%, rgba(13, 148, 136, 0.05) 40%, rgba(7, 9, 14, 0) 70%);
+    /* Apple Pro Glass & Typography Styles */
+    body {
+      background-color: #000000;
+      color: #f5f5f7;
+      letter-spacing: -0.015em;
     }
-    .glass-card {
-      background: rgba(17, 22, 34, 0.8);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.07);
+    
+    .apple-nav {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     }
-    .glass-card:hover {
-      border-color: rgba(99, 102, 241, 0.3);
+
+    .apple-card {
+      background: #161617;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 28px;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .bg-grid {
-      background-size: 32px 32px;
-      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    .apple-card:hover {
+      border-color: rgba(255, 255, 255, 0.18);
+      transform: translateY(-2px);
+    }
+
+    .apple-gradient-text {
+      background: linear-gradient(180deg, #ffffff 0%, #a1a1a6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .apple-blue-gradient {
+      background: linear-gradient(180deg, #2997ff 0%, #0071e3 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .segmented-control {
+      background: #1d1d1f;
+      border-radius: 9999px;
+      padding: 4px;
+      display: inline-flex;
+    }
+
+    /* Apple Custom Slider */
+    input[type=range] {
+      -webkit-appearance: none;
+      background: #2c2c2e;
+      height: 6px;
+      border-radius: 9999px;
+    }
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 18px;
+      width: 18px;
+      border-radius: 50%;
+      background: #ffffff;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
     }
   </style>
 </head>
-<body class="bg-surface-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white bg-grid">
+<body class="antialiased">
 
   <!-- ======================================================== -->
   <!-- NAVIGATION BAR                                           -->
   <!-- ======================================================== -->
-  <nav class="fixed top-0 left-0 right-0 z-50 glass-card border-b border-white/5 py-4 px-6 md:px-12 flex items-center justify-between">
-    <div class="flex items-center gap-3">
-      <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 via-indigo-500 to-clinical-500 flex items-center justify-center shadow-lg shadow-brand-500/20">
-        <i data-lucide="dna" class="w-5 h-5 text-white"></i>
+  <nav class="fixed top-0 left-0 right-0 z-50 apple-nav h-12 flex items-center justify-between px-6 md:px-12 text-xs">
+    <div class="flex items-center gap-6">
+      <a href="#" class="flex items-center gap-2 font-semibold text-white tracking-normal text-sm">
+        <i data-lucide="activity" class="w-4 h-4 text-[#2997ff]"></i>
+        <span>Psych-Metrix</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-[#86868b] font-normal">
+        <a href="#sectors" class="hover:text-white transition">Sectors</a>
+        <a href="#assessment-lab" class="hover:text-white transition">Psychometrics</a>
+        <a href="#clinical-strain" class="hover:text-white transition">Occupational Health</a>
+        <a href="#ksao-builder" class="hover:text-white transition">Role Architecture</a>
+        <a href="#sludge-dashboard" class="hover:text-white transition">Sludge Audit</a>
+        <a href="#services" class="hover:text-white transition">Services</a>
       </div>
-      <div>
-        <span class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-          PSYCH-METRIX <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded-full bg-clinical-500/20 text-clinical-400 border border-clinical-500/30">I-O Science</span>
-        </span>
-      </div>
-    </div>
-
-    <div class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
-      <a href="#sectors" class="hover:text-white transition">Specialized Sectors</a>
-      <a href="#assessment-lab" class="hover:text-white transition">Psychometric Battery</a>
-      <a href="#clinical-strain" class="hover:text-white transition">Healthcare & Stress Lab</a>
-      <a href="#ksao-builder" class="hover:text-white transition">Role KSAO Engine</a>
-      <a href="#sludge-dashboard" class="hover:text-white transition">Sludge Audit</a>
-      <a href="#services" class="hover:text-white transition">Commercial Plans</a>
     </div>
 
     <div class="flex items-center gap-4">
-      <a href="#assessment-lab" class="hidden sm:inline-flex text-xs font-semibold px-4 py-2 rounded-lg bg-surface-800 hover:bg-surface-700 text-slate-200 border border-white/10 transition">
-        Interactive Testing Lab
-      </a>
-      <button onclick="openBookingModal('General Onboarding')" class="text-xs font-semibold px-5 py-2.5 rounded-lg bg-brand-600 hover:bg-brand-500 text-white shadow-lg shadow-brand-600/30 transition transform hover:-translate-y-0.5">
+      <button onclick="openBookingModal('General Intake')" class="bg-[#0071e3] hover:bg-[#0077ed] text-white px-3.5 py-1 rounded-full text-xs font-medium transition shadow-sm">
         Client Intake
       </button>
     </div>
@@ -107,314 +143,127 @@
   <!-- ======================================================== -->
   <!-- HERO SECTION                                             -->
   <!-- ======================================================== -->
-  <header class="relative pt-36 pb-20 md:pt-48 md:pb-28 px-6 hero-glow flex flex-col items-center text-center overflow-hidden">
-    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-card border border-brand-500/30 text-brand-400 text-xs font-medium mb-8">
-      <span class="w-2 h-2 rounded-full bg-clinical-400 animate-pulse"></span>
-      Standards Compliant: APA Division 14 (SIOP) & AERA/NCME Psychometric Frameworks
-    </div>
+  <header class="pt-36 pb-24 md:pt-44 md:pb-32 px-6 flex flex-col items-center text-center max-w-5xl mx-auto">
+    <span class="text-xs font-semibold tracking-wider uppercase text-[#86868b] mb-3">
+      Evidence-Based People Architecture
+    </span>
 
-    <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight max-w-4xl text-white leading-[1.1]">
-      Scientific People Analytics. <br>
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 via-indigo-300 to-clinical-400">
-        Engineered for Human Growth.
-      </span>
+    <h1 class="text-5xl sm:text-7xl md:text-8xl font-bold tracking-tight apple-gradient-text leading-[1.05]">
+      People analytics.<br>
+      <span class="apple-blue-gradient">Pure science.</span>
     </h1>
 
-    <p class="mt-6 text-slate-400 text-lg sm:text-xl max-w-3xl leading-relaxed font-normal">
-      High-precision psychometric batteries, job-analysis modeling (KSAOs), and occupational health diagnostics. Validated for entrepreneurs building executive teams, enterprise HR leaders, and healthcare systems safeguarding clinical staff.
+    <p class="mt-6 text-lg sm:text-2xl text-[#86868b] max-w-2xl font-normal leading-relaxed">
+      Standardized psychometrics, occupational strain diagnostics, and behavioral choice engineering. Built for founders, medical systems, and high-performance teams.
     </p>
 
-    <div class="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-      <a href="#assessment-lab" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm shadow-xl shadow-brand-600/25 flex items-center justify-center gap-2 transition">
-        Run Psychometric Assessment <i data-lucide="arrow-right" class="w-4 h-4"></i>
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm font-medium">
+      <a href="#assessment-lab" class="bg-[#0071e3] hover:bg-[#0077ed] text-white px-6 py-3 rounded-full transition flex items-center gap-1.5">
+        Run Diagnostic <i data-lucide="chevron-right" class="w-4 h-4"></i>
       </a>
-      <a href="#clinical-strain" class="w-full sm:w-auto px-8 py-3.5 rounded-xl glass-card hover:bg-surface-800 text-slate-200 font-semibold text-sm border border-white/10 flex items-center justify-center gap-2 transition">
-        Medical & Corporate Stress Diagnostic
+      <a href="#clinical-strain" class="text-[#2997ff] hover:underline px-4 py-3 flex items-center gap-1">
+        Explore clinical models <i data-lucide="chevron-right" class="w-4 h-4"></i>
       </a>
     </div>
 
-    <!-- Live Telemetry KPI Metrics -->
-    <div class="mt-16 w-full max-w-5xl glass-card rounded-2xl p-6 border border-white/5 flex flex-wrap items-center justify-between gap-6 text-left">
-      <div class="flex items-center gap-4 min-w-[200px]">
-        <div class="p-3 rounded-xl bg-brand-500/10 text-brand-400 border border-brand-500/20">
-          <i data-lucide="shield-check" class="w-6 h-6"></i>
-        </div>
-        <div>
-          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Predictive Validity</div>
-          <div class="text-xl font-bold text-white flex items-center gap-2">
-            r = .51 - .66 <span class="text-xs font-sans font-medium text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">GMA & Big 5</span>
-          </div>
-        </div>
+    <!-- Apple-style Spec Row -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20 w-full text-left">
+      <div class="apple-card p-6">
+        <span class="text-[11px] font-mono uppercase text-[#86868b]">Predictive Validity</span>
+        <div class="text-2xl font-bold text-white mt-2">r = .51 – .66</div>
+        <p class="text-xs text-[#86868b] mt-1">GMA & Big Five criterion standards[cite: 598, 603].</p>
       </div>
 
-      <div class="flex items-center gap-4 min-w-[200px]">
-        <div class="p-3 rounded-xl bg-clinical-500/10 text-clinical-400 border border-clinical-500/20">
-          <i data-lucide="heart-pulse" class="w-6 h-6"></i>
-        </div>
-        <div>
-          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Clinical OHP Model</div>
-          <div class="text-xl font-bold text-white flex items-center gap-2">
-            Karasek JDC-S <span class="text-xs font-sans font-medium text-clinical-400 bg-clinical-500/10 px-2 py-0.5 rounded">Demand/Control</span>
-          </div>
-        </div>
+      <div class="apple-card p-6">
+        <span class="text-[11px] font-mono uppercase text-[#86868b]">Occupational Health</span>
+        <div class="text-2xl font-bold text-[#2997ff] mt-2">Karasek JDC-S</div>
+        <p class="text-xs text-[#86868b] mt-1">Demand-Control strain modeling[cite: 388].</p>
       </div>
 
-      <div class="flex items-center gap-4 min-w-[200px]">
-        <div class="p-3 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20">
-          <i data-lucide="scale" class="w-6 h-6"></i>
-        </div>
-        <div>
-          <div class="text-xs font-mono text-slate-400 uppercase tracking-wider">Selection Compliance</div>
-          <div class="text-xl font-bold text-white">Uniform Guidelines & EEOC</div>
-        </div>
+      <div class="apple-card p-6">
+        <span class="text-[11px] font-mono uppercase text-[#86868b]">Measurement Standard</span>
+        <div class="text-2xl font-bold text-white mt-2">APA & SIOP</div>
+        <p class="text-xs text-[#86868b] mt-1">Ethical Standard 3.11 & 9.03[cite: 578, 580].</p>
+      </div>
+
+      <div class="apple-card p-6">
+        <span class="text-[11px] font-mono uppercase text-[#86868b]">Sludge Auditing</span>
+        <div class="text-2xl font-bold text-[#30d158] mt-2">PCI Protocol</div>
+        <p class="text-xs text-[#86868b] mt-1">Process, Communication & Inclusivity[cite: 105, 107].</p>
       </div>
     </div>
   </header>
 
   <!-- ======================================================== -->
-  <!-- 4 SECTOR SOLUTIONS: BUSINESS, FOUNDERS, HEALTHCARE, PSYCH -->
+  <!-- 4 SECTORS: BENTO BOX LAYOUT                              -->
   <!-- ======================================================== -->
-  <section id="sectors" class="py-24 px-6 max-w-7xl mx-auto">
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-xs font-mono uppercase tracking-widest text-brand-400 mb-3">Multi-Disciplinary Application</h2>
-      <p class="text-3xl sm:text-4xl font-bold text-white">Designed for 4 High-Stake Environments</p>
-      <p class="mt-4 text-slate-400 text-sm sm:text-base">Grounded in the scientist-practitioner model of I-O psychology and behavioral healthcare operations.</p>
+  <section id="sectors" class="py-24 px-6 max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <span class="text-xs font-semibold uppercase tracking-wider text-[#86868b]">Built for Critical Roles</span>
+      <h2 class="text-3xl sm:text-5xl font-bold text-white mt-2">Specialized sectors.</h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Sector 1: Entrepreneurs & Founders -->
-      <div class="glass-card p-6 rounded-2xl border border-white/5 flex flex-col justify-between">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Bento 1: Startups -->
+      <div class="apple-card p-10 flex flex-col justify-between">
         <div>
-          <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-400 flex items-center justify-center mb-5 border border-brand-500/20">
-            <i data-lucide="rocket" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-lg font-bold text-white">Entrepreneurs & Startups</h3>
-          <p class="mt-2 text-slate-400 text-xs leading-relaxed">
-            Co-founder compatibility analysis, Cohen Conflict Response mapping, risk orientation, and early-stage agile role definition.
+          <span class="text-xs font-mono uppercase text-[#2997ff]">01 • Early-Stage</span>
+          <h3 class="text-2xl font-bold text-white mt-2">Founders & Entrepreneurs</h3>
+          <p class="text-sm text-[#86868b] mt-3 leading-relaxed">
+            Co-founder cognitive alignment, Cohen Conflict Response mapping (Sage vs. Warrior styles)[cite: 337], and agile KSAO role definition under radical ambiguity[cite: 203, 445].
           </p>
-          <ul class="mt-4 space-y-2 text-xs text-slate-300">
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-400"></i> Founder risk tolerance</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-400"></i> Conflict resolution profiling</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brand-400"></i> Early team cognitive complementarity</li>
-          </ul>
         </div>
-        <button onclick="filterSector('entrepreneur')" class="mt-6 w-full py-2.5 rounded-lg bg-surface-800 hover:bg-surface-700 text-white font-semibold text-xs border border-white/10 transition">
-          View Founder Toolkit
-        </button>
+        <div class="mt-8 flex items-center justify-between">
+          <button onclick="scrollToLab('entrepreneur')" class="text-xs font-semibold text-[#2997ff] flex items-center gap-1 hover:underline">
+            Test Founder Profile <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
       </div>
 
-      <!-- Sector 2: Business & Enterprise -->
-      <div class="glass-card p-6 rounded-2xl border border-white/5 flex flex-col justify-between">
+      <!-- Bento 2: Enterprise -->
+      <div class="apple-card p-10 flex flex-col justify-between">
         <div>
-          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-5 border border-indigo-500/20">
-            <i data-lucide="briefcase" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-lg font-bold text-white">Business Executives</h3>
-          <p class="mt-2 text-slate-400 text-xs leading-relaxed">
-            Standardized talent selection, structured interview scoring matrices, 360-degree leadership appraisal, and OCB/CWB auditing.
+          <span class="text-xs font-mono uppercase text-[#86868b]">02 • Corporate</span>
+          <h3 class="text-2xl font-bold text-white mt-2">Enterprise & HR Leaders</h3>
+          <p class="text-sm text-[#86868b] mt-3 leading-relaxed">
+            Legally defensible structured interviews[cite: 230], Campbell’s job performance criteria[cite: 444], 360-degree feedback calibration[cite: 277, 486], and reducing counterproductive work behaviors (CWB)[cite: 592].
           </p>
-          <ul class="mt-4 space-y-2 text-xs text-slate-300">
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> Personnel selection validity ($r = .51$)</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> 360-degree multi-source feedback</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> Counterproductive behavior mitigation</li>
-          </ul>
         </div>
-        <button onclick="filterSector('business')" class="mt-6 w-full py-2.5 rounded-lg bg-surface-800 hover:bg-surface-700 text-white font-semibold text-xs border border-white/10 transition">
-          View Enterprise Suite
-        </button>
+        <div class="mt-8 flex items-center justify-between">
+          <button onclick="scrollToLab('business')" class="text-xs font-semibold text-[#2997ff] flex items-center gap-1 hover:underline">
+            View Enterprise Models <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
       </div>
 
-      <!-- Sector 3: Medical & Healthcare -->
-      <div class="glass-card p-6 rounded-2xl border border-clinical-500/30 flex flex-col justify-between shadow-lg shadow-clinical-500/5">
+      <!-- Bento 3: Healthcare -->
+      <div class="apple-card p-10 flex flex-col justify-between border-t-2 border-t-[#30d158]">
         <div>
-          <div class="w-12 h-12 rounded-xl bg-clinical-500/10 text-clinical-400 flex items-center justify-center mb-5 border border-clinical-500/20">
-            <i data-lucide="stethoscope" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-lg font-bold text-white">Medical & Healthcare</h3>
-          <p class="mt-2 text-slate-400 text-xs leading-relaxed">
-            Physician and nursing burnout inventories, shift-work fatigue monitoring, clinical team psychological safety, and error reduction.
+          <span class="text-xs font-mono uppercase text-[#30d158]">03 • Clinical Operations</span>
+          <h3 class="text-2xl font-bold text-white mt-2">Medical Professionals & Hospitals</h3>
+          <p class="text-sm text-[#86868b] mt-3 leading-relaxed">
+            Physician and ICU nursing burnout monitoring, rotational shift circadian strain[cite: 388], psychological safety climate analysis, and eliminating illegitimate administrative tasks[cite: 388].
           </p>
-          <ul class="mt-4 space-y-2 text-xs text-slate-300">
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-clinical-400"></i> Karasek Demand-Control audit</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-clinical-400"></i> Emotional labor strain diagnostics</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-clinical-400"></i> Clinical safety climate analysis</li>
-          </ul>
         </div>
-        <button onclick="filterSector('medical')" class="mt-6 w-full py-2.5 rounded-lg bg-clinical-600 hover:bg-clinical-500 text-white font-semibold text-xs shadow-md shadow-clinical-600/20 transition">
-          View Medical Protocols
-        </button>
+        <div class="mt-8 flex items-center justify-between">
+          <button onclick="scrollToLab('medical')" class="text-xs font-semibold text-[#30d158] flex items-center gap-1 hover:underline">
+            Clinical Strain Lab <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </button>
+        </div>
       </div>
 
-      <!-- Sector 4: Applied Psychologists -->
-      <div class="glass-card p-6 rounded-2xl border border-white/5 flex flex-col justify-between">
+      <!-- Bento 4: Psychologists -->
+      <div class="apple-card p-10 flex flex-col justify-between">
         <div>
-          <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-5 border border-purple-500/20">
-            <i data-lucide="brain" class="w-6 h-6"></i>
-          </div>
-          <h3 class="text-lg font-bold text-white">People Scientists & I-O</h3>
-          <p class="mt-2 text-slate-400 text-xs leading-relaxed">
-            Standardized psychometric test administration, raw-to-normed scoring, inter-rater reliability adjustments, and SIOP audit reports.
+          <span class="text-xs font-mono uppercase text-[#86868b]">04 • Behavioral Science</span>
+          <h3 class="text-2xl font-bold text-white mt-2">Applied Psychologists</h3>
+          <p class="text-sm text-[#86868b] mt-3 leading-relaxed">
+            Classical test theory true-score adjustments, inter-rater reliability corrections ($r_{xx} = .52$)[cite: 596], and behavioral choice architecture engineering[cite: 33, 49].
           </p>
-          <ul class="mt-4 space-y-2 text-xs text-slate-300">
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> Inter-rater reliability ($r_{xx} = .52$)</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> Classical test theory & SEM</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> Sludge & behavioral nudging audits</li>
-          </ul>
         </div>
-        <button onclick="filterSector('psychologist')" class="mt-6 w-full py-2.5 rounded-lg bg-surface-800 hover:bg-surface-700 text-white font-semibold text-xs border border-white/10 transition">
-          View Science Portal
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================================================== -->
-  <!-- TOOL 1: VALIDATED PSYCHOMETRIC ASSESSMENT LAB            -->
-  <!-- ======================================================== -->
-  <section id="assessment-lab" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-      <div>
-        <span class="text-xs font-mono uppercase tracking-widest text-brand-400">Diagnostic Suite 01</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Executive Psychometric Battery (IPIP & CSE)</h2>
-        <p class="text-slate-400 text-sm mt-2">A standardized mini-battery evaluating the Big Five Personality Factors and Core Self-Evaluations (Judge et al., 2002).</p>
-      </div>
-      <div class="mt-4 md:mt-0">
-        <span class="text-xs font-mono px-3 py-1 rounded-full bg-brand-500/20 text-brand-400 border border-brand-500/30">
-          Standardized Inventory
-        </span>
-      </div>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-      <!-- Interactive Questionnaire -->
-      <div class="lg:col-span-6 glass-card p-8 rounded-2xl border border-white/10">
-        <h3 class="text-lg font-bold text-white mb-2 flex items-center gap-2">
-          <i data-lucide="file-text" class="w-5 h-5 text-brand-400"></i> Self-Report Assessment Items
-        </h3>
-        <p class="text-xs text-slate-400 mb-6 font-mono">Rate each statement honestly on a 1 (Strongly Disagree) to 5 (Strongly Agree) scale:</p>
-
-        <div class="space-y-5" id="psychometricQuestions">
-          <!-- Question 1: Conscientiousness -->
-          <div class="border-b border-white/5 pb-3">
-            <div class="flex justify-between text-xs mb-1.5">
-              <span class="text-slate-200">1. I am always prepared and carry through on commitments thoroughly.</span>
-              <span id="q1_val" class="font-mono text-brand-400 font-bold">4</span>
-            </div>
-            <input type="range" min="1" max="5" value="4" class="w-full accent-brand-500 bg-surface-700 h-1.5 rounded cursor-pointer" oninput="updatePsychScore(1, this.value)">
-          </div>
-
-          <!-- Question 2: Emotional Stability -->
-          <div class="border-b border-white/5 pb-3">
-            <div class="flex justify-between text-xs mb-1.5">
-              <span class="text-slate-200">2. I handle high-stakes pressure calmly and rarely experience acute anxiety.</span>
-              <span id="q2_val" class="font-mono text-brand-400 font-bold">4</span>
-            </div>
-            <input type="range" min="1" max="5" value="4" class="w-full accent-brand-500 bg-surface-700 h-1.5 rounded cursor-pointer" oninput="updatePsychScore(2, this.value)">
-          </div>
-
-          <!-- Question 3: Extraversion -->
-          <div class="border-b border-white/5 pb-3">
-            <div class="flex justify-between text-xs mb-1.5">
-              <span class="text-slate-200">3. I actively take charge in social groups and energize interpersonal discussions.</span>
-              <span id="q3_val" class="font-mono text-brand-400 font-bold">3</span>
-            </div>
-            <input type="range" min="1" max="5" value="3" class="w-full accent-brand-500 bg-surface-700 h-1.5 rounded cursor-pointer" oninput="updatePsychScore(3, this.value)">
-          </div>
-
-          <!-- Question 4: Agreeableness -->
-          <div class="border-b border-white/5 pb-3">
-            <div class="flex justify-between text-xs mb-1.5">
-              <span class="text-slate-200">4. I am deeply empathetic to colleagues and seek consensus in disputes.</span>
-              <span id="q4_val" class="font-mono text-brand-400 font-bold">4</span>
-            </div>
-            <input type="range" min="1" max="5" value="4" class="w-full accent-brand-500 bg-surface-700 h-1.5 rounded cursor-pointer" oninput="updatePsychScore(4, this.value)">
-          </div>
-
-          <!-- Question 5: Openness -->
-          <div class="border-b border-white/5 pb-3">
-            <div class="flex justify-between text-xs mb-1.5">
-              <span class="text-slate-200">5. I seek novel, unconventional concepts and embrace procedural disruption.</span>
-              <span id="q5_val" class="font-mono text-brand-400 font-bold">5</span>
-            </div>
-            <input type="range" min="1" max="5" value="5" class="w-full accent-brand-500 bg-surface-700 h-1.5 rounded cursor-pointer" oninput="updatePsychScore(5, this.value)">
-          </div>
-
-          <!-- Question 6: Core Self-Evaluations (Locus of Control & Efficacy) -->
-          <div class="pb-2">
-            <div class="flex justify-between text-xs mb-1.5">
-              <span class="text-slate-200">6. I believe I control my own professional destiny and can solve any obstacle.</span>
-              <span id="q6_val" class="font-mono text-brand-400 font-bold">4</span>
-            </div>
-            <input type="range" min="1" max="5" value="4" class="w-full accent-brand-500 bg-surface-700 h-1.5 rounded cursor-pointer" oninput="updatePsychScore(6, this.value)">
-          </div>
-        </div>
-      </div>
-
-      <!-- Quantitative Psychometric Diagnostic Output -->
-      <div class="lg:col-span-6 glass-card p-8 rounded-2xl border border-white/10 flex flex-col justify-between">
-        <div>
-          <div class="flex items-center justify-between border-b border-white/5 pb-4 mb-6">
-            <div>
-              <span class="text-xs font-mono text-slate-400 uppercase">Psychometric Trait Profile</span>
-              <h4 class="text-xl font-bold text-white mt-1">Normed Performance & Trait Radar</h4>
-            </div>
-            <div id="csePill" class="px-3.5 py-1 rounded-full text-xs font-bold font-mono bg-indigo-500/10 text-brand-400 border border-brand-500/30">
-              HIGH EFFICACY (84th %ile)
-            </div>
-          </div>
-
-          <!-- Trait Progress Bars -->
-          <div class="space-y-4 mb-6 text-xs">
-            <div>
-              <div class="flex justify-between font-mono mb-1">
-                <span class="text-slate-300">Conscientiousness (Predictor of Task Performance)</span>
-                <span id="barC_val" class="text-brand-400 font-bold">80%</span>
-              </div>
-              <div class="w-full bg-surface-700 h-2 rounded-full overflow-hidden">
-                <div id="barC" class="bg-brand-500 h-full rounded-full transition-all duration-300" style="width: 80%;"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between font-mono mb-1">
-                <span class="text-slate-300">Emotional Stability (Stress Resilience & Low Neuroticism)</span>
-                <span id="barES_val" class="text-clinical-400 font-bold">80%</span>
-              </div>
-              <div class="w-full bg-surface-700 h-2 rounded-full overflow-hidden">
-                <div id="barES" class="bg-clinical-500 h-full rounded-full transition-all duration-300" style="width: 80%;"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between font-mono mb-1">
-                <span class="text-slate-300">Core Self-Evaluation (Self-Efficacy, Locus of Control)</span>
-                <span id="barCSE_val" class="text-purple-400 font-bold">80%</span>
-              </div>
-              <div class="w-full bg-surface-700 h-2 rounded-full overflow-hidden">
-                <div id="barCSE" class="bg-purple-500 h-full rounded-full transition-all duration-300" style="width: 80%;"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between font-mono mb-1">
-                <span class="text-slate-300">Openness / Innovation (Creative & Adaptive Performance)</span>
-                <span id="barO_val" class="text-cyan-400 font-bold">100%</span>
-              </div>
-              <div class="w-full bg-surface-700 h-2 rounded-full overflow-hidden">
-                <div id="barO" class="bg-cyan-500 h-full rounded-full transition-all duration-300" style="width: 100%;"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="p-4 rounded-xl bg-surface-900 border border-white/5 text-xs text-slate-300 leading-relaxed" id="psychometricInterpretation">
-            <strong>Psychometric Interpretation:</strong> Candidate displays a strong profile characterized by high achievement striving, high self-efficacy, and superior stress insulation. Ideal for volatile entrepreneurial leadership or demanding clinical supervisory roles.
-          </div>
-        </div>
-
-        <div class="pt-6 border-t border-white/5 mt-6 flex items-center justify-between">
-          <span class="text-xs text-slate-400">Need a comprehensive 120-item computerized adaptive test (CAT)?</span>
-          <button onclick="openBookingModal('Pro Psychometric CAT Evaluation')" class="text-xs font-semibold text-brand-400 hover:text-brand-300 flex items-center gap-1">
-            Order Standardized Battery <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+        <div class="mt-8 flex items-center justify-between">
+          <button onclick="scrollToLab('psychologist')" class="text-xs font-semibold text-[#2997ff] flex items-center gap-1 hover:underline">
+            Access Methodology <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
           </button>
         </div>
       </div>
@@ -422,424 +271,432 @@
   </section>
 
   <!-- ======================================================== -->
-  <!-- TOOL 2: HEALTHCARE & CORPORATE OCCUPATIONAL STRESS LAB   -->
+  <!-- TOOL 1: PSYCHOMETRIC ASSESSMENT LAB                      -->
   <!-- ======================================================== -->
-  <section id="clinical-strain" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
+  <section id="assessment-lab" class="py-24 px-6 max-w-6xl mx-auto border-t border-white/10">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
       <div>
-        <span class="text-xs font-mono uppercase tracking-widest text-clinical-400">Diagnostic Suite 02</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Occupational Stress & Burnout Diagnostic</h2>
-        <p class="text-slate-400 text-sm mt-2">Operationalizing Karasek's Job Demand-Control-Support model and Maslach Burnout Inventory dimensions for clinical and corporate teams.</p>
+        <span class="text-xs font-semibold uppercase tracking-wider text-[#86868b]">Interactive Assessment</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Five-Factor & Core Self-Evaluation Battery</h2>
       </div>
-      <div class="mt-4 md:mt-0">
-        <span class="text-xs font-mono px-3 py-1 rounded-full bg-clinical-500/20 text-clinical-400 border border-clinical-500/30">
-          Occupational Health Psychology
-        </span>
-      </div>
+      <span class="text-xs font-mono px-3 py-1 rounded-full bg-[#1d1d1f] text-[#86868b] border border-white/5 mt-4 md:mt-0">
+        IPIP / Judge CSE Standards[cite: 305, 501]
+      </span>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
       <!-- Input Sliders -->
-      <div class="lg:col-span-5 glass-card p-8 rounded-2xl border border-white/10">
-        <h3 class="text-lg font-bold text-white mb-6 flex items-center gap-2">
-          <i data-lucide="activity-square" class="w-5 h-5 text-clinical-400"></i> Environmental Stress Inputs
-        </h3>
+      <div class="lg:col-span-6 apple-card p-8">
+        <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-6">Self-Report Items</h3>
 
-        <div class="space-y-6">
+        <div class="space-y-6 text-xs">
           <div>
-            <div class="flex justify-between text-xs font-mono mb-2">
-              <span class="text-slate-300 uppercase">Psychological Job Demands (Workload, Time Urgency)</span>
-              <span id="val_demand" class="text-clinical-400 font-bold">7 / 10</span>
+            <div class="flex justify-between text-[#86868b] mb-2 font-medium">
+              <span class="text-white">1. Conscientiousness (Execution & Discipline)[cite: 501, 593]</span>
+              <span id="q1_disp" class="font-mono text-white">4 / 5</span>
             </div>
-            <input type="range" min="1" max="10" value="7" class="w-full accent-clinical-500 bg-surface-700 h-2 rounded cursor-pointer" oninput="recalcStress()">
+            <input type="range" min="1" max="5" value="4" class="w-full" oninput="updatePsychMetric(1, this.value)">
           </div>
 
           <div>
-            <div class="flex justify-between text-xs font-mono mb-2">
-              <span class="text-slate-300 uppercase">Decision Latitude / Control (Autonomy, Skill Discretion)</span>
-              <span id="val_control" class="text-clinical-400 font-bold">4 / 10</span>
+            <div class="flex justify-between text-[#86868b] mb-2 font-medium">
+              <span class="text-white">2. Emotional Stability (Stress & Tension Resistance)[cite: 501]</span>
+              <span id="q2_disp" class="font-mono text-white">4 / 5</span>
             </div>
-            <input type="range" min="1" max="10" value="4" class="w-full accent-clinical-500 bg-surface-700 h-2 rounded cursor-pointer" oninput="recalcStress()">
+            <input type="range" min="1" max="5" value="4" class="w-full" oninput="updatePsychMetric(2, this.value)">
           </div>
 
           <div>
-            <div class="flex justify-between text-xs font-mono mb-2">
-              <span class="text-slate-300 uppercase">Workplace Social Support (Supervisory & Peer)</span>
-              <span id="val_support" class="text-clinical-400 font-bold">5 / 10</span>
+            <div class="flex justify-between text-[#86868b] mb-2 font-medium">
+              <span class="text-white">3. Core Self-Evaluations (Locus of Control)[cite: 305]</span>
+              <span id="q3_disp" class="font-mono text-white">4 / 5</span>
             </div>
-            <input type="range" min="1" max="10" value="5" class="w-full accent-clinical-500 bg-surface-700 h-2 rounded cursor-pointer" oninput="recalcStress()">
+            <input type="range" min="1" max="5" value="4" class="w-full" oninput="updatePsychMetric(3, this.value)">
           </div>
 
           <div>
-            <div class="flex justify-between text-xs font-mono mb-2">
-              <span class="text-slate-300 uppercase">Shift Type / Circadian Disruption</span>
-              <span id="val_shift" class="text-clinical-400 font-bold">Rotating Shifts / Night Call</span>
+            <div class="flex justify-between text-[#86868b] mb-2 font-medium">
+              <span class="text-white">4. Openness to Experience (Cognitive Flexibility)[cite: 501, 601]</span>
+              <span id="q4_disp" class="font-mono text-white">5 / 5</span>
             </div>
-            <select id="shiftSelect" class="w-full bg-surface-850 border border-white/10 rounded-xl px-4 py-2 text-xs text-white focus:outline-none focus:border-clinical-500" onchange="recalcStress()">
-              <option value="1">Standard Day Shift (Low Circadian Strain)</option>
-              <option value="2" selected>Rotating Shift / On-Call (Elevated Fatigue)</option>
-              <option value="3">Permanent Night Shift / Emergency ICU Schedule</option>
-            </select>
+            <input type="range" min="1" max="5" value="5" class="w-full" oninput="updatePsychMetric(4, this.value)">
           </div>
         </div>
       </div>
 
-      <!-- Karasek Quadrant & Clinical Burnout Output -->
-      <div class="lg:col-span-7 glass-card p-8 rounded-2xl border border-white/10 flex flex-col justify-between">
-        <div>
-          <div class="flex items-center justify-between border-b border-white/5 pb-4 mb-6">
-            <div>
-              <span class="text-xs font-mono text-slate-400 uppercase">Karasek Strain Quadrant Analysis</span>
-              <h4 class="text-xl font-bold text-white mt-1" id="karasekQuadrantTitle">High Strain Job (Active Burnout Vector)</h4>
+      <!-- Real-Time Metrics Output -->
+      <div class="lg:col-span-6 apple-card p-8">
+        <div class="flex justify-between items-center mb-6">
+          <span class="text-xs font-semibold uppercase tracking-wider text-[#86868b]">Normed Profile</span>
+          <span id="psychPill" class="text-xs font-mono font-medium px-3 py-1 rounded-full bg-[#1d1d1f] text-[#30d158] border border-white/5">
+            OPTIMAL FIT (84th %ile)
+          </span>
+        </div>
+
+        <div class="space-y-4 mb-6 text-xs">
+          <div>
+            <div class="flex justify-between text-[#86868b] mb-1 font-mono">
+              <span>Conscientiousness</span>
+              <span id="barC_val" class="text-white">80%</span>
             </div>
-            <div id="stressPill" class="px-3.5 py-1 rounded-full text-xs font-bold font-mono bg-rose-500/10 text-rose-400 border border-rose-500/30">
-              CRITICAL VULNERABILITY
+            <div class="w-full bg-[#2c2c2e] h-2 rounded-full overflow-hidden">
+              <div id="barC" class="bg-[#2997ff] h-full rounded-full transition-all duration-300" style="width: 80%;"></div>
             </div>
           </div>
 
-          <div class="grid grid-cols-3 gap-4 mb-6 text-center">
-            <div class="p-4 rounded-xl bg-surface-900 border border-white/5">
-              <span class="text-xs font-mono text-slate-400 uppercase">Strain Ratio</span>
-              <div id="statStrain" class="text-2xl font-extrabold text-rose-400 mt-1">1.75</div>
-              <span class="text-[10px] text-slate-500 font-mono">Demand / Control</span>
+          <div>
+            <div class="flex justify-between text-[#86868b] mb-1 font-mono">
+              <span>Emotional Stability</span>
+              <span id="barES_val" class="text-white">80%</span>
             </div>
-            <div class="p-4 rounded-xl bg-surface-900 border border-white/5">
-              <span class="text-xs font-mono text-slate-400 uppercase">Iso-Strain Score</span>
-              <div id="statIsoStrain" class="text-2xl font-extrabold text-amber-400 mt-1">74 / 100</div>
-              <span class="text-[10px] text-slate-500 font-mono">Unmitigated Stress</span>
-            </div>
-            <div class="p-4 rounded-xl bg-surface-900 border border-white/5">
-              <span class="text-xs font-mono text-slate-400 uppercase">Clinical Exhaustion</span>
-              <div id="statBurnout" class="text-2xl font-extrabold text-white mt-1">High Risk</div>
-              <span class="text-[10px] text-slate-500 font-mono">30-Day Outlook</span>
+            <div class="w-full bg-[#2c2c2e] h-2 rounded-full overflow-hidden">
+              <div id="barES" class="bg-[#30d158] h-full rounded-full transition-all duration-300" style="width: 80%;"></div>
             </div>
           </div>
 
-          <div class="space-y-4">
-            <h5 class="text-xs font-mono uppercase tracking-wider text-slate-300">Occupational Health Psychology Interventions</h5>
-            <div class="p-4 rounded-xl bg-surface-900/50 border border-white/5 text-xs text-slate-300 leading-relaxed" id="ohpRec1">
-              • <strong>Job Control Expansion:</strong> Expand decision discretion immediately. When healthcare or corporate workers cannot modify task pacing under high demand, cardiovascular and psychological risks triple.
+          <div>
+            <div class="flex justify-between text-[#86868b] mb-1 font-mono">
+              <span>Core Self-Evaluations</span>
+              <span id="barCSE_val" class="text-white">80%</span>
             </div>
-            <div class="p-4 rounded-xl bg-surface-900/50 border border-white/5 text-xs text-slate-300 leading-relaxed" id="ohpRec2">
-              • <strong>Illegitimate Task Elimination:</strong> Audit shifts for 'illegitimate tasks' (administrative burdens deemed unnecessary or unreasonable). Eliminating illegitimate tasks directly protects employee self-esteem and morale.
+            <div class="w-full bg-[#2c2c2e] h-2 rounded-full overflow-hidden">
+              <div id="barCSE" class="bg-[#a855f7] h-full rounded-full transition-all duration-300" style="width: 80%;"></div>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between text-[#86868b] mb-1 font-mono">
+              <span>Openness to Experience</span>
+              <span id="barO_val" class="text-white">100%</span>
+            </div>
+            <div class="w-full bg-[#2c2c2e] h-2 rounded-full overflow-hidden">
+              <div id="barO" class="bg-[#ff9f0a] h-full rounded-full transition-all duration-300" style="width: 100%;"></div>
             </div>
           </div>
         </div>
 
-        <div class="pt-6 border-t border-white/5 mt-6 flex items-center justify-between">
-          <span class="text-xs text-slate-400">Need an institutional audit across hospital wards or departments?</span>
-          <button onclick="openBookingModal('Medical Staff Resilience Audit')" class="text-xs font-semibold text-clinical-400 hover:text-clinical-300 flex items-center gap-1">
-            Commission Institutional Audit <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================================================== -->
-  <!-- TOOL 3: ROLE KSAO & PERFORMANCE MODELER                  -->
-  <!-- ======================================================== -->
-  <section id="ksao-builder" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
-      <div>
-        <span class="text-xs font-mono uppercase tracking-widest text-brand-400">Diagnostic Suite 03</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">Role KSAO & Performance Criterion Builder</h2>
-        <p class="text-slate-400 text-sm mt-2">Translate job functions into job-oriented tasks and person-oriented KSAOs (Spector Chapter 3 & SAGE Handbook).</p>
-      </div>
-      <div class="mt-4 md:mt-0">
-        <span class="text-xs font-mono px-3 py-1 rounded-full bg-brand-500/20 text-brand-400 border border-brand-500/30">
-          Job Analysis Engine
-        </span>
-      </div>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-      <!-- Selector -->
-      <div class="lg:col-span-4 glass-card p-6 rounded-2xl border border-white/10">
-        <h3 class="text-base font-bold text-white mb-4">Select Target Benchmark Role</h3>
-        <div class="space-y-3">
-          <button onclick="loadKSAO('medical_lead')" class="w-full text-left p-3.5 rounded-xl bg-surface-900 hover:bg-surface-800 border border-white/5 focus:border-brand-500 transition">
-            <div class="text-xs font-bold text-white">Chief Medical Officer / Clinical Lead</div>
-            <div class="text-[10px] text-slate-400 mt-0.5">High crisis cognition • Strict ethics • Team safety</div>
-          </button>
-
-          <button onclick="loadKSAO('tech_founder')" class="w-full text-left p-3.5 rounded-xl bg-surface-900 hover:bg-surface-800 border border-white/5 focus:border-brand-500 transition">
-            <div class="text-xs font-bold text-white">Startup Technical Co-Founder (CTO)</div>
-            <div class="text-[10px] text-slate-400 mt-0.5">Rapid innovation • Extreme ambiguity • Task mastery</div>
-          </button>
-
-          <button onclick="loadKSAO('enterprise_ops')" class="w-full text-left p-3.5 rounded-xl bg-surface-900 hover:bg-surface-800 border border-white/5 focus:border-brand-500 transition">
-            <div class="text-xs font-bold text-white">VP of Enterprise Operations</div>
-            <div class="text-[10px] text-slate-400 mt-0.5">Process optimization • Conflict negotiation • CWB control</div>
-          </button>
-        </div>
-      </div>
-
-      <!-- KSAO Specification Display -->
-      <div class="lg:col-span-8 glass-card p-8 rounded-2xl border border-white/10 flex flex-col justify-between">
-        <div id="ksaoDisplayArea">
-          <!-- Populated by JavaScript -->
-        </div>
-
-        <div class="pt-6 border-t border-white/5 mt-6 flex items-center justify-between">
-          <span class="text-xs text-slate-400">Need legally defensible job evaluation and structured interview guides?</span>
-          <button onclick="openBookingModal('Custom Job Analysis & KSAO Protocol')" class="text-xs font-semibold text-brand-400 hover:text-brand-300 flex items-center gap-1">
-            Deploy Formal Job Analysis <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-          </button>
+        <div class="p-4 rounded-2xl bg-[#000000] border border-white/5 text-xs text-[#86868b] leading-relaxed" id="psychInterp">
+          <strong>Psychometric Summary:</strong> High conscientiousness and strong internal locus of control predictive of high task performance and low organizational withdrawal[cite: 305, 593].
         </div>
       </div>
     </div>
   </section>
 
   <!-- ======================================================== -->
-  <!-- TOOL 4: SLUDGE AUDIT & BEHAVIORAL FRICTION SCORECARD     -->
+  <!-- TOOL 2: OCCUPATIONAL HEALTH & STRAIN LAB                 -->
   <!-- ======================================================== -->
-  <section id="sludge-dashboard" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
+  <section id="clinical-strain" class="py-24 px-6 max-w-6xl mx-auto border-t border-white/10">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
       <div>
-        <span class="text-xs font-mono uppercase tracking-widest text-indigo-400">Diagnostic Suite 04</span>
-        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-2">PCI Sludge & Friction Audit Dashboard</h2>
-        <p class="text-slate-400 text-sm mt-2">Audit and eliminate administrative friction across Process (P), Communication (C), and Inclusivity (I) (Cowen, Kannan, & Soman).</p>
+        <span class="text-xs font-semibold uppercase tracking-wider text-[#86868b]">Occupational Health Psychology</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Karasek Job Strain Diagnostic</h2>
       </div>
-      <div class="mt-4 md:mt-0">
-        <span class="text-xs font-mono px-3 py-1 rounded-full bg-indigo-500/20 text-indigo-400 border border-indigo-500/30">
-          Sludge-Busting Architecture
-        </span>
-      </div>
+      <span class="text-xs font-mono px-3 py-1 rounded-full bg-[#1d1d1f] text-[#30d158] border border-white/5 mt-4 md:mt-0">
+        Clinical Model (Demand-Control-Support)[cite: 388]
+      </span>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-      <!-- Questionnaire -->
-      <div class="lg:col-span-5 glass-card p-8 rounded-2xl border border-white/10">
-        <h3 class="text-base font-bold text-white mb-6 flex items-center gap-2">
-          <i data-lucide="filter" class="w-5 h-5 text-indigo-400"></i> Friction Dimension Auditing
-        </h3>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div class="lg:col-span-6 apple-card p-8">
+        <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-6">Work Environment Inputs</h3>
 
-        <div class="space-y-6">
+        <div class="space-y-6 text-xs">
           <div>
-            <div class="flex justify-between text-xs font-mono mb-2">
-              <span class="text-slate-300 uppercase">Process: Verification Steps & Duplicate Forms</span>
-              <span id="sludgePVal" class="text-indigo-400 font-bold">5 Touchpoints</span>
+            <div class="flex justify-between text-[#86868b] mb-2 font-medium">
+              <span class="text-white">Job Demands (Workload, Time Pressures)[cite: 388]</span>
+              <span id="val_demand" class="font-mono text-white">7 / 10</span>
             </div>
-            <input type="range" min="1" max="10" value="5" class="w-full accent-indigo-500 bg-surface-700 h-2 rounded cursor-pointer" oninput="document.getElementById('sludgePVal').innerText = this.value + ' Touchpoints'; recalcSludge();">
+            <input type="range" min="1" max="10" value="7" class="w-full" oninput="recalcKarasek()">
           </div>
 
           <div>
-            <div class="flex justify-between text-xs font-mono mb-2">
-              <span class="text-slate-300 uppercase">Communication: Language Complexity & Shrouding</span>
-              <span id="sludgeCVal" class="text-indigo-400 font-bold">Grade 12 (Legal/Jargon Dense)</span>
+            <div class="flex justify-between text-[#86868b] mb-2 font-medium">
+              <span class="text-white">Decision Latitude (Autonomy & Discretion)[cite: 388]</span>
+              <span id="val_control" class="font-mono text-white">4 / 10</span>
             </div>
-            <select id="sludgeCSelect" class="w-full bg-surface-850 border border-white/10 rounded-xl px-4 py-2 text-xs text-white focus:outline-none focus:border-indigo-500" onchange="recalcSludge()">
-              <option value="90">Grade 5 Comprehension (Visual, Checklists, Salient)</option>
-              <option value="60" selected>Grade 12 Comprehension (Dense Text / Technical Terms)</option>
-              <option value="25">Obfuscated Legal Jargon (Shrouded Surcharges & Delays)</option>
+            <input type="range" min="1" max="10" value="4" class="w-full" oninput="recalcKarasek()">
+          </div>
+
+          <div>
+            <div class="flex justify-between text-[#86868b] mb-2 font-medium">
+              <span class="text-white">Workplace Social Support (Peer & Supervisory)[cite: 388]</span>
+              <span id="val_support" class="font-mono text-white">5 / 10</span>
+            </div>
+            <input type="range" min="1" max="10" value="5" class="w-full" oninput="recalcKarasek()">
+          </div>
+
+          <div>
+            <div class="flex justify-between text-[#86868b] mb-2 font-medium">
+              <span class="text-white">Shift / Circadian Schedule[cite: 388]</span>
+            </div>
+            <select id="shiftSelect" class="w-full bg-[#1d1d1f] border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none" onchange="recalcKarasek()">
+              <option value="1">Standard Day Schedule</option>
+              <option value="2" selected>Rotational / On-Call Night Shift</option>
+              <option value="3">Permanent ICU / High-Emergency Schedule</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Strain Results Card -->
+      <div class="lg:col-span-6 apple-card p-8">
+        <div class="flex justify-between items-center mb-6">
+          <span class="text-xs font-semibold uppercase tracking-wider text-[#86868b]">Quadrant State</span>
+          <span id="karasekPill" class="text-xs font-mono font-medium px-3 py-1 rounded-full bg-[#1d1d1f] text-[#ff453a] border border-white/5">
+            HIGH STRAIN
+          </span>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mb-6">
+          <div class="p-5 rounded-2xl bg-[#000000] border border-white/5">
+            <span class="text-[11px] font-mono uppercase text-[#86868b]">Demand/Control Ratio</span>
+            <div id="statRatio" class="text-3xl font-bold text-[#ff453a] mt-1">1.75</div>
+            <span class="text-[10px] text-[#86868b]">Threshold &gt; 1.0 indicates risk</span>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-[#000000] border border-white/5">
+            <span class="text-[11px] font-mono uppercase text-[#86868b]">Iso-Strain Index</span>
+            <div id="statIso" class="text-3xl font-bold text-[#ff9f0a] mt-1">74 / 100</div>
+            <span class="text-[10px] text-[#86868b]">Exhaustion vulnerability[cite: 388]</span>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-[#000000] border border-white/5 text-xs text-[#86868b] leading-relaxed" id="karasekRec">
+          <strong>Clinical Intervention:</strong> High demand coupled with low autonomy produces acute autonomic strain. Expand decision discretion and eliminate illegitimate administrative tasks[cite: 388].
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- TOOL 3: ROLE KSAO SPECIFICATION BUILDER                  -->
+  <!-- ======================================================== -->
+  <section id="ksao-builder" class="py-24 px-6 max-w-6xl mx-auto border-t border-white/10">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-[#86868b]">Job Analysis Framework</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Role Architecture & KSAO Profiles</h2>
+      </div>
+      <span class="text-xs font-mono px-3 py-1 rounded-full bg-[#1d1d1f] text-[#86868b] border border-white/5 mt-4 md:mt-0">
+        Person-Oriented Job Analysis[cite: 445]
+      </span>
+    </div>
+
+    <div class="apple-card p-8">
+      <!-- Segmented Role Switcher -->
+      <div class="flex justify-center mb-8">
+        <div class="segmented-control">
+          <button onclick="selectKSAORole('medical')" id="btnRoleMed" class="px-5 py-2 rounded-full text-xs font-medium text-white bg-[#323236] transition">
+            Clinical Leader
+          </button>
+          <button onclick="selectKSAORole('tech')" id="btnRoleTech" class="px-5 py-2 rounded-full text-xs font-medium text-[#86868b] hover:text-white transition">
+            Startup CTO
+          </button>
+          <button onclick="selectKSAORole('ops')" id="btnRoleOps" class="px-5 py-2 rounded-full text-xs font-medium text-[#86868b] hover:text-white transition">
+            VP Operations
+          </button>
+        </div>
+      </div>
+
+      <div id="ksaoContentArea" class="space-y-6 text-xs">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- TOOL 4: PCI SLUDGE AUDIT DASHBOARD                       -->
+  <!-- ======================================================== -->
+  <section id="sludge-dashboard" class="py-24 px-6 max-w-6xl mx-auto border-t border-white/10">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div>
+        <span class="text-xs font-semibold uppercase tracking-wider text-[#86868b]">Behavioral Friction</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">PCI Sludge Scorecard</h2>
+      </div>
+      <span class="text-xs font-mono px-3 py-1 rounded-full bg-[#1d1d1f] text-[#86868b] border border-white/5 mt-4 md:mt-0">
+        Cowen, Kannan & Soman Metric[cite: 105]
+      </span>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div class="lg:col-span-6 apple-card p-8">
+        <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-6">Friction Metrics</h3>
+
+        <div class="space-y-6 text-xs">
+          <div>
+            <div class="flex justify-between text-[#86868b] mb-2 font-medium">
+              <span class="text-white">Process Touchpoints & Duplicate Forms[cite: 106]</span>
+              <span id="sludgeP_disp" class="font-mono text-white">5 Forms</span>
+            </div>
+            <input type="range" min="1" max="10" value="5" class="w-full" oninput="recalcSludgeUI()">
+          </div>
+
+          <div>
+            <div class="flex justify-between text-[#86868b] mb-2 font-medium">
+              <span class="text-white">Communication Complexity[cite: 107]</span>
+            </div>
+            <select id="sludgeCSelect" class="w-full bg-[#1d1d1f] border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none" onchange="recalcSludgeUI()">
+              <option value="90">Grade 5 Plain English (Clear Checklists)[cite: 107]</option>
+              <option value="60" selected>Grade 12 Standard (Moderate Jargon)</option>
+              <option value="25">Obfuscated Legal Disclaimers (High Sludge)[cite: 100]</option>
             </select>
           </div>
 
           <div>
-            <div class="flex justify-between text-xs font-mono mb-2">
-              <span class="text-slate-300 uppercase">Inclusivity: Emotional Stigma & Disclosure Anxiety</span>
-              <span id="sludgeIVal" class="text-indigo-400 font-bold">Moderate Hesitation</span>
+            <div class="flex justify-between text-[#86868b] mb-2 font-medium">
+              <span class="text-white">Inclusivity & Stigma Level[cite: 101, 107]</span>
             </div>
-            <select id="sludgeISelect" class="w-full bg-surface-850 border border-white/10 rounded-xl px-4 py-2 text-xs text-white focus:outline-none focus:border-indigo-500" onchange="recalcSludge()">
-              <option value="95">Zero Stigma (Empowering, Anonymous, Neutral Language)</option>
-              <option value="55" selected>Moderate Friction (Occasional Social Awkwardness)</option>
-              <option value="20">Severe Embarrassment / Bureaucratic Intimidation</option>
+            <select id="sludgeISelect" class="w-full bg-[#1d1d1f] border border-white/10 rounded-xl px-4 py-2.5 text-xs text-white focus:outline-none" onchange="recalcSludgeUI()">
+              <option value="95">Zero Stigma / Completely Anonymous</option>
+              <option value="55" selected>Moderate Disclosure Hesitation</option>
+              <option value="20">Severe Social Anxiety / Bureaucratic Intimidation[cite: 101]</option>
             </select>
           </div>
         </div>
       </div>
 
       <!-- Sludge Output Results -->
-      <div class="lg:col-span-7 glass-card p-8 rounded-2xl border border-white/10 flex flex-col justify-between">
-        <div>
-          <div class="flex items-center justify-between border-b border-white/5 pb-4 mb-6">
-            <div>
-              <span class="text-xs font-mono text-slate-400 uppercase">PCI Audit Summary</span>
-              <h4 class="text-xl font-bold text-white mt-1">Impedance & Conversion Risk</h4>
-            </div>
-            <div id="sludgePill" class="px-3.5 py-1 rounded-full text-xs font-bold font-mono bg-amber-500/10 text-amber-400 border border-amber-500/30">
-              ELEVATED SLUDGE
-            </div>
-          </div>
-
-          <div class="grid grid-cols-3 gap-4 mb-6 text-center">
-            <div class="p-4 rounded-xl bg-surface-900 border border-white/5">
-              <span class="text-xs font-mono text-slate-400 uppercase">Process (P)</span>
-              <div id="valP" class="text-2xl font-bold text-white mt-1">50%</div>
-            </div>
-            <div class="p-4 rounded-xl bg-surface-900 border border-white/5">
-              <span class="text-xs font-mono text-slate-400 uppercase">Comm (C)</span>
-              <div id="valC" class="text-2xl font-bold text-white mt-1">60%</div>
-            </div>
-            <div class="p-4 rounded-xl bg-surface-900 border border-white/5">
-              <span class="text-xs font-mono text-slate-400 uppercase">Inclusivity (I)</span>
-              <div id="valI" class="text-2xl font-bold text-white mt-1">55%</div>
-            </div>
-          </div>
-
-          <div class="space-y-4">
-            <h5 class="text-xs font-mono uppercase tracking-wider text-slate-300">Actionable Sludge-Busting Directives</h5>
-            <div class="p-4 rounded-xl bg-surface-900/50 border border-white/5 text-xs text-slate-300 leading-relaxed" id="sludgeAuditRec1">
-              • <strong>Eliminate Redundant Intake:</strong> Patients and employees experience acute irritation when repeating medical histories or demographic inputs across multiple departments.
-            </div>
-            <div class="p-4 rounded-xl bg-surface-900/50 border border-white/5 text-xs text-slate-300 leading-relaxed" id="sludgeAuditRec2">
-              • <strong>Decision Points vs. Roadblocks:</strong> Replace administrative friction with proactive decision points to ensure mindful adherence without causing task abandonment.
-            </div>
-          </div>
-        </div>
-
-        <div class="pt-6 border-t border-white/5 mt-6 flex items-center justify-between">
-          <span class="text-xs text-slate-400">Ready to audit onboarding, patient intake, or checkout flows?</span>
-          <button onclick="openBookingModal('Organizational Sludge Audit')" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
-            Commission Sludge Audit <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======================================================== -->
-  <!-- COMMERCIAL PACKAGES & PRICING                            -->
-  <!-- ======================================================== -->
-  <section id="services" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 class="text-xs font-mono uppercase tracking-widest text-brand-400 mb-3">Professional Retainers & Testing Fees</h2>
-      <p class="text-3xl sm:text-4xl font-bold text-white">Commercial Engagement Tiers</p>
-      <p class="mt-4 text-slate-400 text-sm sm:text-base">Fully defensible, scientifically validated assessment packages tailored for startups, corporations, and clinical systems.</p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Tier 1: Candidate Assessment & P-J Fit -->
-      <div class="glass-card p-8 rounded-2xl border border-white/5 flex flex-col justify-between">
-        <div>
-          <span class="text-xs font-mono text-slate-400 uppercase tracking-widest">Entry Talent & Founders</span>
-          <h3 class="text-xl font-bold text-white mt-1">Candidate Screening & P-J Fit</h3>
-          <div class="mt-6 flex items-baseline gap-1">
-            <span class="text-4xl font-extrabold text-white">$650</span>
-            <span class="text-sm text-slate-400">/ candidate</span>
-          </div>
-          <p class="mt-4 text-xs text-slate-400 leading-relaxed">Cognitive reasoning, Five-Factor personality profiling, integrity testing, and role suitability reporting.</p>
-          <hr class="border-white/5 my-6">
-          <ul class="space-y-3 text-xs text-slate-300">
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Full Big Five & Cognitive Assessment Battery</li>
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Role KSAO Alignment & Score Benchmarks</li>
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Legally Defensible Key-Issue Structured Interview Key</li>
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Candidate Feedback Debrief (Ethical Standard 9.03)</li>
-          </ul>
-        </div>
-        <button onclick="openBookingModal('Candidate Screening & P-J Fit ($650)')" class="mt-8 w-full py-3.5 rounded-xl bg-surface-800 hover:bg-surface-700 text-white font-semibold text-xs border border-white/10 transition">
-          Commission Candidate Assessment
-        </button>
-      </div>
-
-      <!-- Tier 2: Executive 360 & Occupational Health Suite -->
-      <div class="glass-card p-8 rounded-2xl border border-brand-500/50 relative flex flex-col justify-between transform md:-translate-y-2 shadow-xl shadow-brand-500/10">
-        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
-          <span class="px-3 py-1 rounded-full bg-brand-600 text-[10px] font-bold font-mono tracking-wider text-white uppercase shadow-md shadow-brand-600/50">
-            Most Commissioned
+      <div class="lg:col-span-6 apple-card p-8">
+        <div class="flex justify-between items-center mb-6">
+          <span class="text-xs font-semibold uppercase tracking-wider text-[#86868b]">Impedance Score</span>
+          <span id="sludgePill" class="text-xs font-mono font-medium px-3 py-1 rounded-full bg-[#1d1d1f] text-[#ff9f0a] border border-white/5">
+            ELEVATED SLUDGE
           </span>
         </div>
-        <div>
-          <span class="text-xs font-mono text-brand-400 uppercase tracking-widest">Leadership & Medical Units</span>
-          <h3 class="text-xl font-bold text-white mt-1">Executive 360 & Team Stress Diagnostic</h3>
-          <div class="mt-6 flex items-baseline gap-1">
-            <span class="text-4xl font-extrabold text-white">$2,800</span>
-            <span class="text-sm text-slate-400">/ engagement</span>
+
+        <div class="grid grid-cols-3 gap-4 mb-6 text-center">
+          <div class="p-4 rounded-2xl bg-[#000000] border border-white/5">
+            <span class="text-[11px] font-mono uppercase text-[#86868b]">Process (P)[cite: 106]</span>
+            <div id="dispP" class="text-2xl font-bold text-white mt-1">50%</div>
           </div>
-          <p class="mt-4 text-xs text-slate-400 leading-relaxed">Multi-source peer/supervisor/subordinate review with Karasek strain and burnout mitigation roadmap.</p>
+          <div class="p-4 rounded-2xl bg-[#000000] border border-white/5">
+            <span class="text-[11px] font-mono uppercase text-[#86868b]">Comm (C)[cite: 107]</span>
+            <div id="dispC" class="text-2xl font-bold text-white mt-1">60%</div>
+          </div>
+          <div class="p-4 rounded-2xl bg-[#000000] border border-white/5">
+            <span class="text-[11px] font-mono uppercase text-[#86868b]">Inclusivity (I)[cite: 107]</span>
+            <div id="dispI" class="text-2xl font-bold text-white mt-1">55%</div>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-[#000000] border border-white/5 text-xs text-[#86868b] leading-relaxed" id="sludgeText">
+          <strong>Sludge-Busting Protocol:</strong> Redundant questions identified across registration touchpoints[cite: 106]. Streamline authentication to prevent user drop-off[cite: 96, 104].
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- COMMERCIAL SERVICES & PRICING                            -->
+  <!-- ======================================================== -->
+  <section id="services" class="py-24 px-6 max-w-6xl mx-auto border-t border-white/10">
+    <div class="text-center mb-16">
+      <span class="text-xs font-semibold uppercase tracking-wider text-[#86868b]">Commercial Engagement</span>
+      <h2 class="text-3xl sm:text-5xl font-bold text-white mt-2">Professional retainers.</h2>
+      <p class="text-sm text-[#86868b] mt-3">Psychometrically sound and legally defensible frameworks[cite: 448].</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Plan 1 -->
+      <div class="apple-card p-8 flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-mono uppercase text-[#86868b]">Startups & Founders</span>
+          <h3 class="text-xl font-bold text-white mt-2">Candidate Screening</h3>
+          <div class="mt-6 flex items-baseline gap-1">
+            <span class="text-4xl font-bold text-white">$650</span>
+            <span class="text-xs text-[#86868b]">/ assessment</span>
+          </div>
+          <p class="mt-3 text-xs text-[#86868b] leading-relaxed">Cognitive reasoning, Five-Factor personality profile, and key-issue interview scoring[cite: 235, 500].</p>
           <hr class="border-white/5 my-6">
-          <ul class="space-y-3 text-xs text-slate-300">
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> 360-Degree Frame-of-Reference (FORS) Evaluation</li>
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Department-wide Job Demand-Control-Support Audit</li>
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Uncorrected vs. Reliability-Adjusted Trait Indices</li>
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> 2-Hour Executive Coaching Session with Licensed I-O Lead</li>
+          <ul class="space-y-3 text-xs text-[#86868b]">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-white"></i> GMA & Big Five Battery[cite: 500]</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-white"></i> Structured Key-Issue Scoring Key[cite: 235]</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-white"></i> Role KSAO Suitability Index[cite: 445]</li>
           </ul>
         </div>
-        <button onclick="openBookingModal('Executive 360 & Team Stress Diagnostic ($2,800)')" class="mt-8 w-full py-3.5 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-xs shadow-lg shadow-brand-600/30 transition">
-          Deploy Executive Diagnostic
+        <button onclick="openBookingModal('Candidate Screening ($650)')" class="mt-8 w-full py-2.5 rounded-full bg-[#1d1d1f] hover:bg-[#2c2c2e] text-white font-medium text-xs border border-white/10 transition">
+          Purchase Assessment
         </button>
       </div>
 
-      <!-- Tier 3: Enterprise Retainer -->
-      <div class="glass-card p-8 rounded-2xl border border-white/5 flex flex-col justify-between">
+      <!-- Plan 2 -->
+      <div class="apple-card p-8 flex flex-col justify-between border-2 border-[#0071e3]">
         <div>
-          <span class="text-xs font-mono text-slate-400 uppercase tracking-widest">Health Systems & Enterprise</span>
-          <h3 class="text-xl font-bold text-white mt-1">Institutional People Analytics Retainer</h3>
+          <span class="text-xs font-mono uppercase text-[#2997ff]">Clinical & Executive</span>
+          <h3 class="text-xl font-bold text-white mt-2">360 & Occupational Health</h3>
           <div class="mt-6 flex items-baseline gap-1">
-            <span class="text-4xl font-extrabold text-white">$7,500</span>
-            <span class="text-sm text-slate-400">/ month</span>
+            <span class="text-4xl font-bold text-white">$2,800</span>
+            <span class="text-xs text-[#86868b]">/ unit engagement</span>
           </div>
-          <p class="mt-4 text-xs text-slate-400 leading-relaxed">Dedicated I-O behavioral partner, continuous sludge audits, custom test validation, and boardroom briefings.</p>
+          <p class="mt-3 text-xs text-[#86868b] leading-relaxed">360-degree multi-source feedback paired with Karasek strain and burnout mitigation[cite: 388, 486].</p>
           <hr class="border-white/5 my-6">
-          <ul class="space-y-3 text-xs text-slate-300">
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Full In-Situ Randomized Controlled Trial (RCT) Testing</li>
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Hospital/Unit Psychological Safety & Error Reduction System</li>
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> PCI Sludge Scorecard Integration into Internal Operations</li>
-            <li class="flex items-center gap-2.5"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> On-Demand Advisory Access for C-Suite and Clinical Directors</li>
+          <ul class="space-y-3 text-xs text-[#86868b]">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-white"></i> 360 Multisource Feedback[cite: 486]</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-white"></i> Karasek Iso-Strain Audit[cite: 388]</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-white"></i> 2-Hour Strategy Debrief with I-O Lead</li>
           </ul>
         </div>
-        <button onclick="openBookingModal('Institutional People Analytics Retainer ($7,500/mo)')" class="mt-8 w-full py-3.5 rounded-xl bg-surface-800 hover:bg-surface-700 text-white font-semibold text-xs border border-white/10 transition">
-          Retain Managing Partner
+        <button onclick="openBookingModal('Executive 360 & Team Stress Diagnostic ($2,800)')" class="mt-8 w-full py-2.5 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white font-medium text-xs transition">
+          Commission Diagnostic
+        </button>
+      </div>
+
+      <!-- Plan 3 -->
+      <div class="apple-card p-8 flex flex-col justify-between">
+        <div>
+          <span class="text-xs font-mono uppercase text-[#86868b]">Health Systems</span>
+          <h3 class="text-xl font-bold text-white mt-2">Institutional Retainer</h3>
+          <div class="mt-6 flex items-baseline gap-1">
+            <span class="text-4xl font-bold text-white">$7,500</span>
+            <span class="text-xs text-[#86868b]">/ month</span>
+          </div>
+          <p class="mt-3 text-xs text-[#86868b] leading-relaxed">Dedicated I-O people scientist, continuous PCI sludge auditing, and executive coaching[cite: 105, 385].</p>
+          <hr class="border-white/5 my-6">
+          <ul class="space-y-3 text-xs text-[#86868b]">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-white"></i> In-situ field experiments & RCTs[cite: 13]</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-white"></i> Full PCI Sludge Eradication[cite: 105]</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-white"></i> C-Suite Advisory & Psychological Safety</li>
+          </ul>
+        </div>
+        <button onclick="openBookingModal('Institutional Retainer ($7,500/mo)')" class="mt-8 w-full py-2.5 rounded-full bg-[#1d1d1f] hover:bg-[#2c2c2e] text-white font-medium text-xs border border-white/10 transition">
+          Retain Partner
         </button>
       </div>
     </div>
   </section>
 
   <!-- ======================================================== -->
-  <!-- CLIENT INTAKE & BOOKING MODAL                            -->
+  <!-- CLIENT INTAKE MODAL                                      -->
   <!-- ======================================================== -->
-  <div id="bookingModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4">
-    <div class="glass-card max-w-lg w-full p-8 rounded-2xl border border-white/10 relative">
-      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white">
+  <div id="bookingModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4">
+    <div class="apple-card max-w-md w-full p-8 border border-white/15 relative">
+      <button onclick="closeBookingModal()" class="absolute top-6 right-6 text-[#86868b] hover:text-white">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
 
-      <div class="flex items-center gap-3 mb-4">
-        <div class="w-8 h-8 rounded-lg bg-brand-500/20 text-brand-400 flex items-center justify-center">
-          <i data-lucide="calendar" class="w-4 h-4"></i>
-        </div>
-        <h3 class="text-lg font-bold text-white">Client Engagement Intake</h3>
-      </div>
-      <p class="text-xs text-slate-400 mb-6">Complete the clinical/organizational intake to provision psychometric access or schedule an initial assessment debrief.</p>
+      <span class="text-[11px] font-mono uppercase text-[#86868b]">Client Engagement</span>
+      <h3 class="text-xl font-bold text-white mt-1 mb-2">Initiate Assessment</h3>
+      <p class="text-xs text-[#86868b] mb-6">Enter your details to receive secure testing credentials.</p>
 
-      <form id="intakeForm" onsubmit="submitIntake(event)" class="space-y-4 text-xs">
+      <form onsubmit="handleFormSubmit(event)" class="space-y-4 text-xs">
         <div>
-          <label class="block text-slate-300 font-mono mb-1">Target Package / Engagement</label>
-          <input type="text" id="intakePackage" readonly class="w-full bg-surface-900 border border-white/10 rounded-lg p-2.5 text-white font-mono">
-        </div>
-
-        <div class="grid grid-cols-2 gap-3">
-          <div>
-            <label class="block text-slate-300 font-mono mb-1">Your Full Name</label>
-            <input type="text" required placeholder="e.g. Dr. Jordan Vance" class="w-full bg-surface-850 border border-white/10 rounded-lg p-2.5 text-white focus:outline-none focus:border-brand-500">
-          </div>
-          <div>
-            <label class="block text-slate-300 font-mono mb-1">Professional Sector</label>
-            <select class="w-full bg-surface-850 border border-white/10 rounded-lg p-2.5 text-white focus:outline-none focus:border-brand-500">
-              <option>Medical & Healthcare Hospital</option>
-              <option>Venture / Tech Startup Founder</option>
-              <option>Enterprise Corporation</option>
-              <option>Licensed Psychologist / Academic</option>
-            </select>
-          </div>
+          <label class="block text-[#86868b] font-mono mb-1">Service Tier</label>
+          <input type="text" id="targetPackageInput" readonly class="w-full bg-[#1d1d1f] border border-white/10 rounded-xl p-3 text-white font-mono">
         </div>
 
         <div>
-          <label class="block text-slate-300 font-mono mb-1">Official Professional / Corporate Email</label>
-          <input type="email" required placeholder="name@organization.com" class="w-full bg-surface-850 border border-white/10 rounded-lg p-2.5 text-white focus:outline-none focus:border-brand-500">
+          <label class="block text-[#86868b] font-mono mb-1">Full Name</label>
+          <input type="text" required placeholder="e.g. Dr. Alex Vance" class="w-full bg-[#1d1d1f] border border-white/10 rounded-xl p-3 text-white focus:outline-none focus:border-[#0071e3]">
         </div>
 
         <div>
-          <label class="block text-slate-300 font-mono mb-1">Primary Assessment Objective</label>
-          <textarea rows="3" placeholder="Describe the target role, organizational strain factors, or clinical team objectives..." class="w-full bg-surface-850 border border-white/10 rounded-lg p-2.5 text-white focus:outline-none focus:border-brand-500"></textarea>
+          <label class="block text-[#86868b] font-mono mb-1">Corporate / Institutional Email</label>
+          <input type="email" required placeholder="alex@healthsystem.org" class="w-full bg-[#1d1d1f] border border-white/10 rounded-xl p-3 text-white focus:outline-none focus:border-[#0071e3]">
         </div>
 
-        <div class="pt-2">
-          <button type="submit" class="w-full py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-xs shadow-lg shadow-brand-600/30 transition">
-            Submit Intake & Receive Portal Credentials
-          </button>
-        </div>
+        <button type="submit" class="w-full mt-2 py-3 rounded-full bg-[#0071e3] hover:bg-[#0077ed] text-white font-medium text-xs transition">
+          Submit Intake
+        </button>
       </form>
     </div>
   </div>
@@ -847,35 +704,34 @@
   <!-- ======================================================== -->
   <!-- FOOTER                                                   -->
   <!-- ======================================================== -->
-  <footer class="border-t border-white/5 py-12 px-6 max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-slate-500 font-mono">
+  <footer class="border-t border-white/10 py-12 px-6 max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-[#86868b]">
     <div>
-      © 2026 PSYCH-METRIX Inc. Industrial-Organizational & Occupational Health Psychology Practice.
+      © 2026 PSYCH-METRIX. Designed in Cupertino style. Standards: SIOP, APA, & AERA[cite: 583, 584].
     </div>
     <div class="flex items-center gap-6">
-      <a href="#" class="hover:text-slate-300">APA Ethics 3.11 Compliance</a>
-      <a href="#" class="hover:text-slate-300">Uniform Guidelines (EEOC)</a>
-      <a href="#" class="hover:text-slate-300">Clinical Test Standards</a>
+      <a href="#" class="hover:text-white transition">Ethics Statement</a>
+      <a href="#" class="hover:text-white transition">Research Standards</a>
+      <a href="#" class="hover:text-white transition">Confidentiality (APA 4.01)[cite: 579]</a>
     </div>
   </footer>
 
   <!-- ======================================================== -->
-  <!-- JAVASCRIPT LOGIC & PSYCHOMETRIC CALCULATIONS             -->
+  <!-- SCRIPTS & INTERACTION LOGIC                              -->
   <!-- ======================================================== -->
   <script>
     lucide.createIcons();
 
-    // 1. Psychometric Battery Real-Time Scoring Logic
-    const psychScores = { 1: 4, 2: 4, 3: 3, 4: 4, 5: 5, 6: 4 };
+    // 1. Psychometric Calculator
+    const currentPsych = { 1: 4, 2: 4, 3: 4, 4: 5 };
 
-    function updatePsychScore(qNum, value) {
-      psychScores[qNum] = parseInt(value);
-      document.getElementById(`q${qNum}_val`).innerText = value;
+    function updatePsychMetric(idx, val) {
+      currentPsych[idx] = parseInt(val);
+      document.getElementById(`q${idx}_disp`).innerText = `${val} / 5`;
 
-      // Calculate Trait Percentiles (Mapped 1-5 scale to 20-100% normalized scores)
-      const cScore = psychScores[1] * 20;
-      const esScore = psychScores[2] * 20;
-      const oScore = psychScores[5] * 20;
-      const cseScore = Math.round(((psychScores[2] + psychScores[6]) / 2) * 20);
+      const cScore = currentPsych[1] * 20;
+      const esScore = currentPsych[2] * 20;
+      const cseScore = currentPsych[3] * 20;
+      const oScore = currentPsych[4] * 20;
 
       document.getElementById('barC').style.width = `${cScore}%`;
       document.getElementById('barC_val').innerText = `${cScore}%`;
@@ -883,32 +739,32 @@
       document.getElementById('barES').style.width = `${esScore}%`;
       document.getElementById('barES_val').innerText = `${esScore}%`;
 
-      document.getElementById('barO').style.width = `${oScore}%`;
-      document.getElementById('barO_val').innerText = `${oScore}%`;
-
       document.getElementById('barCSE').style.width = `${cseScore}%`;
       document.getElementById('barCSE_val').innerText = `${cseScore}%`;
 
-      const pill = document.getElementById('csePill');
-      const interp = document.getElementById('psychometricInterpretation');
+      document.getElementById('barO').style.width = `${oScore}%`;
+      document.getElementById('barO_val').innerText = `${oScore}%`;
 
-      if (cseScore >= 80 && cScore >= 75) {
-        pill.innerText = "HIGH EFFICACY & EXECUTION (88th %ile)";
-        pill.className = "px-3.5 py-1 rounded-full text-xs font-bold font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30";
-        interp.innerHTML = "<strong>Psychometric Interpretation:</strong> Candidate displays superior emotional self-regulation, conscientiousness, and internal locus of control. Statistically elevated probability of high task performance and low withdrawal behaviors.";
-      } else if (cseScore >= 60) {
-        pill.innerText = "BALANCED EQUILIBRIUM (65th %ile)";
-        pill.className = "px-3.5 py-1 rounded-full text-xs font-bold font-mono bg-indigo-500/10 text-brand-400 border border-brand-500/30";
-        interp.innerHTML = "<strong>Psychometric Interpretation:</strong> Moderate profile suited for structured environments with clear supervisory feedback and defined project milestones.";
+      const pill = document.getElementById('psychPill');
+      const interp = document.getElementById('psychInterp');
+
+      if (cScore >= 80 && esScore >= 80) {
+        pill.innerText = "OPTIMAL FIT (88th %ile)";
+        pill.className = "text-xs font-mono font-medium px-3 py-1 rounded-full bg-[#1d1d1f] text-[#30d158] border border-white/5";
+        interp.innerHTML = "<strong>Psychometric Summary:</strong> High conscientiousness and emotional stability. Strong predictor of task performance and self-regulatory discipline[cite: 501, 593].";
+      } else if (cScore >= 60) {
+        pill.innerText = "MODERATE CAPABILITY (65th %ile)";
+        pill.className = "text-xs font-mono font-medium px-3 py-1 rounded-full bg-[#1d1d1f] text-[#2997ff] border border-white/5";
+        interp.innerHTML = "<strong>Psychometric Summary:</strong> Stable candidate profile. Suited for standardized roles with structured milestone check-ins.";
       } else {
-        pill.innerText = "ELEVATED STRAIN RISK (35th %ile)";
-        pill.className = "px-3.5 py-1 rounded-full text-xs font-bold font-mono bg-amber-500/10 text-amber-400 border border-amber-500/30";
-        interp.innerHTML = "<strong>Psychometric Interpretation:</strong> Candidate is vulnerable to external role ambiguity and acute anxiety under unstructured crisis environments. Requires high psychological safety buffers.";
+        pill.innerText = "VULNERABILITY TO STRAIN (35th %ile)";
+        pill.className = "text-xs font-mono font-medium px-3 py-1 rounded-full bg-[#1d1d1f] text-[#ff9f0a] border border-white/5";
+        interp.innerHTML = "<strong>Psychometric Summary:</strong> Heightened anxiety under crisis conditions. Requires strong peer support and clear procedural guidelines[cite: 101, 121].";
       }
     }
 
-    // 2. Karasek Job Demand-Control-Support Model
-    function recalcStress() {
+    // 2. Karasek Stress Diagnostic
+    function recalcKarasek() {
       const demand = parseInt(document.querySelectorAll('#clinical-strain input[type="range"]')[0].value);
       const control = parseInt(document.querySelectorAll('#clinical-strain input[type="range"]')[1].value);
       const support = parseInt(document.querySelectorAll('#clinical-strain input[type="range"]')[2].value);
@@ -918,208 +774,156 @@
       document.getElementById('val_control').innerText = `${control} / 10`;
       document.getElementById('val_support').innerText = `${support} / 10`;
 
-      // Karasek Demand / Control Ratio
-      const strainRatio = (demand / Math.max(1, control)).toFixed(2);
-      document.getElementById('statStrain').innerText = strainRatio;
+      const ratio = (demand / Math.max(1, control)).toFixed(2);
+      document.getElementById('statRatio').innerText = ratio;
 
-      // Iso-Strain Score (High Demand + Low Control + Low Support + Circadian Fatigue)
-      let isoStrain = Math.round((demand * 5) + ((10 - control) * 4) + ((10 - support) * 3) + (shift * 6));
-      isoStrain = Math.max(15, Math.min(98, isoStrain));
-      document.getElementById('statIsoStrain').innerText = `${isoStrain} / 100`;
+      let iso = Math.round((demand * 5) + ((10 - control) * 4) + ((10 - support) * 3) + (shift * 5));
+      iso = Math.max(15, Math.min(98, iso));
+      document.getElementById('statIso').innerText = `${iso} / 100`;
 
-      const title = document.getElementById('karasekQuadrantTitle');
-      const pill = document.getElementById('stressPill');
-      const burnout = document.getElementById('statBurnout');
-      const rec1 = document.getElementById('ohpRec1');
-      const rec2 = document.getElementById('ohpRec2');
+      const pill = document.getElementById('karasekPill');
+      const rec = document.getElementById('karasekRec');
 
       if (demand >= 6 && control <= 5) {
-        // High Demand, Low Control = High Strain Job
-        title.innerText = "High Strain Job (Active Burnout Vector)";
-        pill.className = "px-3.5 py-1 rounded-full text-xs font-bold font-mono bg-rose-500/10 text-rose-400 border border-rose-500/30";
-        pill.innerText = "ACUTE BURNOUT THREAT";
-        burnout.innerText = "Extreme (Critical)";
-        burnout.className = "text-2xl font-extrabold text-rose-400 mt-1";
-        rec1.innerHTML = "• <strong>Expand Autonomy (Job Discretion):</strong> Immediate clinical mandate: increase schedule control and task prioritization authority to disrupt sympathetic nervous system hyper-arousal.";
-        rec2.innerHTML = "• <strong>Audit Illegitimate Tasks:</strong> Strip non-clinical, redundant documentation burdens from shift schedules to reduce chronic emotional exhaustion.";
+        pill.innerText = "HIGH STRAIN";
+        pill.className = "text-xs font-mono font-medium px-3 py-1 rounded-full bg-[#1d1d1f] text-[#ff453a] border border-white/5";
+        rec.innerHTML = "<strong>Clinical Intervention:</strong> High demand coupled with low autonomy produces acute autonomic strain. Expand decision discretion and eliminate illegitimate administrative tasks[cite: 388].";
       } else if (demand >= 6 && control >= 6) {
-        // High Demand, High Control = Active Job
-        title.innerText = "Active Job (High Motivation & Growth)";
-        pill.className = "px-3.5 py-1 rounded-full text-xs font-bold font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30";
-        pill.innerText = "HIGH LEARNING PROFILE";
-        burnout.innerText = "Low-Moderate";
-        burnout.className = "text-2xl font-extrabold text-emerald-400 mt-1";
-        rec1.innerHTML = "• <strong>Channel Energy:</strong> Workers experience challenges rather than debilitating distress. High potential for innovative problem solving and leadership emergence.";
-        rec2.innerHTML = "• <strong>Monitor Rest Windows:</strong> Ensure mandated off-shift recovery to prevent gradual transition into chronic exhaustion.";
-      } else if (demand <= 5 && control <= 5) {
-        // Low Demand, Low Control = Passive Job
-        title.innerText = "Passive Job (Atrophy & Learned Helplessness)";
-        pill.className = "px-3.5 py-1 rounded-full text-xs font-bold font-mono bg-amber-500/10 text-amber-400 border border-amber-500/30";
-        pill.innerText = "ENGAGEMENT ATROPHY";
-        burnout.innerText = "Moderate (Disengagement)";
-        burnout.className = "text-2xl font-extrabold text-amber-400 mt-1";
-        rec1.innerHTML = "• <strong>Job Enrichment:</strong> Redesign responsibilities to reintroduce skill variety and personal accountability.";
-        rec2.innerHTML = "• <strong>Mitigate Alienation:</strong> Provide professional development ladders to reconnect workers to organizational objectives.";
+        pill.innerText = "ACTIVE GROWTH";
+        pill.className = "text-xs font-mono font-medium px-3 py-1 rounded-full bg-[#1d1d1f] text-[#30d158] border border-white/5";
+        rec.innerHTML = "<strong>Clinical Intervention:</strong> Active job profile. High learning and motivation potential. Ensure structured off-shift sleep windows[cite: 388].";
       } else {
-        // Low Demand, High Control = Low Strain
-        title.innerText = "Low Strain Job (Optimal Psychological Safety)";
-        pill.className = "px-3.5 py-1 rounded-full text-xs font-bold font-mono bg-clinical-500/10 text-clinical-400 border border-clinical-500/30";
-        pill.innerText = "SAFE EQUILIBRIUM";
-        burnout.innerText = "Minimal";
-        burnout.className = "text-2xl font-extrabold text-clinical-400 mt-1";
-        rec1.innerHTML = "• <strong>Sustainable Baseline:</strong> Work conditions provide complete psychological safety and emotional equilibrium.";
-        rec2.innerHTML = "• <strong>Maintenance:</strong> Maintain supportive supervisory norms as headcount grows.";
+        pill.innerText = "LOW STRAIN / STABLE";
+        pill.className = "text-xs font-mono font-medium px-3 py-1 rounded-full bg-[#1d1d1f] text-[#2997ff] border border-white/5";
+        rec.innerHTML = "<strong>Clinical Intervention:</strong> Balanced psychological climate. Maintain current supervisor communication rhythms[cite: 388].";
       }
     }
 
-    // 3. KSAO Benchmark Role Modeler
+    // 3. KSAO Roles
     const ksaoData = {
-      medical_lead: {
-        title: "Chief Medical Officer / Clinical Lead",
-        tasks: [
-          "Coordinates acute patient care across emergency triage units.",
-          "Establishes clinical treatment protocols and ensures institutional compliance with medical boards.",
-          "Resolves high-stakes interpersonal and ethical disputes between clinical staff and hospital administration."
-        ],
-        knowledge: "Advanced diagnostic pathology, hospital emergency medicine laws, pharmacological drug interactions.",
-        skills: "Rapid situational triage, diagnostic medical device operation, surgical intervention management.",
-        abilities: "Cognitive reasoning under severe sensory overload, far-visual acuity, high manual dexterity.",
-        other: "High stress tolerance, conscientiousness, moral courage, emotional resilience in traumatic crises."
+      medical: {
+        title: "Clinical Director / Emergency Lead",
+        tasks: "Coordinates acute hospital intake triage • Enforces clinical protocols • Mediates high-stakes peer disputes.",
+        k: "Advanced trauma pathology, hospital ethics regulations, pharmacology.",
+        s: "Crisis decision pacing, surgical equipment operation, team de-escalation.",
+        a: "Cognitive reasoning under severe sensory overload, far-visual acuity[cite: 456].",
+        o: "Moral courage, high stress tolerance, emotional stability[cite: 446]."
       },
-      tech_founder: {
+      tech: {
         title: "Startup Technical Co-Founder (CTO)",
-        tasks: [
-          "Architects scalable distributed software architecture under severe capital and time constraints.",
-          "Recruits, evaluates, and mentors core full-stack software engineers using structured coding samples.",
-          "Negotiates technical roadmap priorities directly with investors, founders, and enterprise clients."
-        ],
-        knowledge: "Modern cloud infrastructure, computer science data structures, information security compliance.",
-        skills: "Full-stack programming, algorithmic optimization, rapid technical prototyping.",
-        abilities: "High fluid intelligence, inductive logic, cognitive endurance during complex debugging.",
-        other: "Openness to experience, risk-seeking orientation, high intrinsic motivation, perseverance."
+        tasks: "Architects scalable distributed infrastructure • Evaluates engineers using work samples[cite: 493] • Negotiates technical roadmap.",
+        k: "Cloud systems, data structures, application security compliance.",
+        s: "Rapid software prototyping, algorithmic debugging, systems optimization.",
+        a: "High fluid intelligence, inductive logic, working memory stamina.",
+        o: "Openness to experience, risk tolerance, high intrinsic persistence[cite: 254, 295]."
       },
-      enterprise_ops: {
+      ops: {
         title: "VP of Enterprise Operations",
-        tasks: [
-          "Supervises multi-unit supply chain logistics across regional manufacturing distribution plants.",
-          "Designs job evaluation systems and aligns compensation using point-factor job evaluation matrices.",
-          "Monitors and suppresses workplace deviance, inventory shrinkage, and counterproductive work behavior (CWB)."
-        ],
-        knowledge: "Supply chain network theory, labor contract laws, industrial ergonomics, enterprise ERP tools.",
-        skills: "Multi-million dollar budget allocation, KPI metric forecasting, labor negotiation bargaining.",
-        abilities: "Executive decision making, spatial logic, oral and written communication articulation.",
-        other: "High emotional stability, high integrity, task-oriented leadership, organizational loyalty."
+        tasks: "Directs multi-facility distribution • Implements job evaluation point systems[cite: 211, 461] • Controls counterproductive workplace behavior (CWB)[cite: 593].",
+        k: "Labor law, supply chain economics, industrial ergonomics[cite: 393].",
+        s: "Resource allocation, union negotiation, performance appraisal analytics[cite: 468].",
+        a: "Executive decision making, spatial logic, oral and written communication[cite: 456].",
+        o: "High integrity, dependability, task-oriented leadership[cite: 246, 328]."
       }
     };
 
-    function loadKSAO(key) {
-      const data = ksaoData[key];
-      const area = document.getElementById('ksaoDisplayArea');
+    function selectKSAORole(roleKey) {
+      document.getElementById('btnRoleMed').className = roleKey === 'medical' ? "px-5 py-2 rounded-full text-xs font-medium text-white bg-[#323236] transition" : "px-5 py-2 rounded-full text-xs font-medium text-[#86868b] hover:text-white transition";
+      document.getElementById('btnRoleTech').className = roleKey === 'tech' ? "px-5 py-2 rounded-full text-xs font-medium text-white bg-[#323236] transition" : "px-5 py-2 rounded-full text-xs font-medium text-[#86868b] hover:text-white transition";
+      document.getElementById('btnRoleOps').className = roleKey === 'ops' ? "px-5 py-2 rounded-full text-xs font-medium text-white bg-[#323236] transition" : "px-5 py-2 rounded-full text-xs font-medium text-[#86868b] hover:text-white transition";
 
-      area.innerHTML = `
-        <div class="border-b border-white/5 pb-4 mb-4">
-          <span class="text-xs font-mono text-brand-400 uppercase">Role Specification</span>
-          <h4 class="text-xl font-bold text-white mt-1">${data.title}</h4>
+      const r = ksaoData[roleKey];
+      document.getElementById('ksaoContentArea').innerHTML = `
+        <div class="p-6 rounded-2xl bg-[#000000] border border-white/5">
+          <span class="text-[11px] font-mono uppercase text-[#2997ff]">Job-Oriented Tasks[cite: 443]</span>
+          <p class="text-white mt-1 leading-relaxed">${r.tasks}</p>
         </div>
 
-        <div class="space-y-4 text-xs">
-          <div>
-            <span class="font-mono text-slate-400 uppercase font-bold text-[11px]">Core Job-Oriented Tasks:</span>
-            <ul class="list-disc pl-5 mt-1.5 text-slate-300 space-y-1">
-              ${data.tasks.map(t => `<li>${t}</li>`).join('')}
-            </ul>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="p-4 rounded-2xl bg-[#000000] border border-white/5">
+            <span class="text-[10px] font-mono uppercase text-[#86868b]">Knowledge (K)[cite: 445]</span>
+            <p class="text-white mt-1">${r.k}</p>
           </div>
-
-          <div class="grid grid-cols-2 gap-4 pt-2">
-            <div class="p-3.5 rounded-xl bg-surface-900 border border-white/5">
-              <span class="font-mono text-indigo-400 uppercase font-bold text-[10px]">Knowledge (K):</span>
-              <p class="text-slate-300 mt-1">${data.knowledge}</p>
-            </div>
-            <div class="p-3.5 rounded-xl bg-surface-900 border border-white/5">
-              <span class="font-mono text-clinical-400 uppercase font-bold text-[10px]">Skills (S):</span>
-              <p class="text-slate-300 mt-1">${data.skills}</p>
-            </div>
+          <div class="p-4 rounded-2xl bg-[#000000] border border-white/5">
+            <span class="text-[10px] font-mono uppercase text-[#86868b]">Skills (S)[cite: 445]</span>
+            <p class="text-white mt-1">${r.s}</p>
           </div>
-
-          <div class="grid grid-cols-2 gap-4">
-            <div class="p-3.5 rounded-xl bg-surface-900 border border-white/5">
-              <span class="font-mono text-cyan-400 uppercase font-bold text-[10px]">Abilities (A):</span>
-              <p class="text-slate-300 mt-1">${data.abilities}</p>
-            </div>
-            <div class="p-3.5 rounded-xl bg-surface-900 border border-white/5">
-              <span class="font-mono text-purple-400 uppercase font-bold text-[10px]">Other Characteristics (O):</span>
-              <p class="text-slate-300 mt-1">${data.other}</p>
-            </div>
+          <div class="p-4 rounded-2xl bg-[#000000] border border-white/5">
+            <span class="text-[10px] font-mono uppercase text-[#86868b]">Abilities (A)[cite: 445]</span>
+            <p class="text-white mt-1">${r.a}</p>
+          </div>
+          <div class="p-4 rounded-2xl bg-[#000000] border border-white/5">
+            <span class="text-[10px] font-mono uppercase text-[#86868b]">Other Traits (O)[cite: 445]</span>
+            <p class="text-white mt-1">${r.o}</p>
           </div>
         </div>
       `;
     }
 
-    // 4. Sludge Audit Scorecard Logic
-    function recalcSludge() {
+    // 4. Sludge Scorecard
+    function recalcSludgeUI() {
       const steps = parseInt(document.querySelectorAll('#sludge-dashboard input[type="range"]')[0].value);
-      const cScore = parseInt(document.getElementById('sludgeCSelect').value);
-      const iScore = parseInt(document.getElementById('sludgeISelect').value);
+      const c = parseInt(document.getElementById('sludgeCSelect').value);
+      const i = parseInt(document.getElementById('sludgeISelect').value);
+
+      document.getElementById('sludgeP_disp').innerText = `${steps} Forms`;
 
       const pScore = Math.max(10, 100 - (steps * 9));
+      document.getElementById('dispP').innerText = `${pScore}%`;
+      document.getElementById('dispC').innerText = `${c}%`;
+      document.getElementById('dispI').innerText = `${i}%`;
 
-      document.getElementById('valP').innerText = `${pScore}%`;
-      document.getElementById('valC').innerText = `${cScore}%`;
-      document.getElementById('valI').innerText = `${iScore}%`;
-
-      const comp = Math.round((pScore + cScore + iScore) / 3);
+      const avg = Math.round((pScore + c + i) / 3);
       const pill = document.getElementById('sludgePill');
+      const txt = document.getElementById('sludgeText');
 
-      if (comp >= 75) {
-        pill.className = "px-3.5 py-1 rounded-full text-xs font-bold font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30";
-        pill.innerText = "STREAMLINED (LOW SLUDGE)";
-      } else if (comp >= 50) {
-        pill.className = "px-3.5 py-1 rounded-full text-xs font-bold font-mono bg-amber-500/10 text-amber-400 border border-amber-500/30";
+      if (avg >= 75) {
+        pill.innerText = "STREAMLINED";
+        pill.className = "text-xs font-mono font-medium px-3 py-1 rounded-full bg-[#1d1d1f] text-[#30d158] border border-white/5";
+        txt.innerHTML = "<strong>Audit Finding:</strong> Minimal friction. Channel conforms to human processing limits[cite: 96, 105].";
+      } else if (avg >= 50) {
         pill.innerText = "ELEVATED SLUDGE";
+        pill.className = "text-xs font-mono font-medium px-3 py-1 rounded-full bg-[#1d1d1f] text-[#ff9f0a] border border-white/5";
+        txt.innerHTML = "<strong>Audit Finding:</strong> Redundant questions identified across registration touchpoints[cite: 106]. Streamline authentication to prevent user drop-off[cite: 96, 104].";
       } else {
-        pill.className = "px-3.5 py-1 rounded-full text-xs font-bold font-mono bg-rose-500/10 text-rose-400 border border-rose-500/30";
-        pill.innerText = "ACUTE OBSTRUCTION";
+        pill.innerText = "ACUTE IMPEDANCE";
+        pill.className = "text-xs font-mono font-medium px-3 py-1 rounded-full bg-[#1d1d1f] text-[#ff453a] border border-white/5";
+        txt.innerHTML = "<strong>Audit Finding:</strong> Severe bureaucratic barrier. High drop-off rate triggered by legalistic obfuscation[cite: 100, 107].";
       }
     }
 
-    // Sector quick filters
-    function filterSector(type) {
-      if (type === 'medical') {
-        document.getElementById('clinical-strain').scrollIntoView({ behavior: 'smooth' });
-        loadKSAO('medical_lead');
-      } else if (type === 'entrepreneur') {
-        document.getElementById('assessment-lab').scrollIntoView({ behavior: 'smooth' });
-        loadKSAO('tech_founder');
-      } else if (type === 'business') {
-        document.getElementById('ksao-builder').scrollIntoView({ behavior: 'smooth' });
-        loadKSAO('enterprise_ops');
-      } else {
-        document.getElementById('sludge-dashboard').scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-
-    // Modal Booking Actions
-    function openBookingModal(pkgName) {
-      document.getElementById('intakePackage').value = pkgName;
+    // Modal
+    function openBookingModal(pkg) {
+      document.getElementById('targetPackageInput').value = pkg;
       const modal = document.getElementById('bookingModal');
       modal.classList.remove('hidden');
       modal.classList.add('flex');
     }
-
     function closeBookingModal() {
       const modal = document.getElementById('bookingModal');
       modal.classList.add('hidden');
       modal.classList.remove('flex');
     }
-
-    function submitIntake(e) {
+    function handleFormSubmit(e) {
       e.preventDefault();
-      alert("Professional Intake Received. Our clinical and organizational assessment director will transmit portal credentials and SIOP-compliant confidentiality agreements within 4 hours.");
+      alert("Intake confirmed. Our I-O psychology assessment team will issue access credentials within 4 business hours.");
       closeBookingModal();
     }
 
-    // Initialize Default Role
-    loadKSAO('medical_lead');
+    function scrollToLab(target) {
+      if (target === 'medical') {
+        document.getElementById('clinical-strain').scrollIntoView({ behavior: 'smooth' });
+      } else if (target === 'entrepreneur') {
+        document.getElementById('assessment-lab').scrollIntoView({ behavior: 'smooth' });
+      } else if (target === 'business') {
+        document.getElementById('ksao-builder').scrollIntoView({ behavior: 'smooth' });
+      } else {
+        document.getElementById('sludge-dashboard').scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Default Initialization
+    selectKSAORole('medical');
   </script>
 </body>
 </html>
